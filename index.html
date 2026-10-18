@@ -1,0 +1,1487 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d5bff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="دليل SpeakBetter">
+<meta property="og:description" content="دليل مصوّر لاستخدام بيئة SpeakBetter للتحدث بالإنجليزية مع الوكيل الافتراضي أحمد.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f6bff'/%3E%3Cstop offset='1' stop-color='%230a8fd0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url%28%23g%29'/%3E%3Cpath d='M14 20a6 6 0 0 1 6-6h24a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6H31l-11 9v-9a6 6 0 0 1-6-6z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M25 24v8M32 21v14M39 24v8' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>دليل SpeakBetter</title>
+<meta name="description" content="دليل مصوّر لاستخدام بيئة SpeakBetter للتحدث بالإنجليزية مع الوكيل الافتراضي أحمد.">
+<link rel="stylesheet" href="fonts.css">
+<style>
+/* Layout: frosted-glass panels floating over a fixed blue-gradient atmosphere; RTL column (max 1180px), split hero, alternating step panels */
+:root{
+  --bg:#e8f0ff; --atmo-a:#f6faff; --atmo-b:#d3e3ff; --atmo-c:#9dc0ff;
+  --orb-a:rgba(41,98,255,.34); --orb-b:rgba(14,165,233,.28); --orb-c:rgba(125,200,255,.42);
+  --band:rgba(47,107,255,.16);
+  --glass:rgba(255,255,255,.5); --glass-2:rgba(255,255,255,.76); --glass-3:rgba(255,255,255,.34);
+  --glass-line:rgba(255,255,255,.85); --hair:rgba(23,58,140,.13); --sheen:rgba(255,255,255,.55);
+  --shadow:0 24px 60px -30px rgba(16,44,118,.5); --shadow-s:0 10px 26px -16px rgba(16,44,118,.42);
+  --ink:#0a1b3d; --ink-2:#2a4370; --ink-3:#566e98;
+  --accent:#1d5bff; --accent-2:#0a8fd0; --accent-soft:rgba(29,91,255,.1); --accent-line:rgba(29,91,255,.26);
+  --btn-a:#2f6bff; --btn-b:#1444cf; --btn-glow:rgba(29,91,255,.5);
+  --ok:#0b8a4f; --ok-soft:rgba(14,148,85,.13);
+  --warn:#9a4d06; --warn-soft:rgba(245,158,11,.16);
+  --danger:#c81e43; --danger-soft:rgba(208,31,69,.1);
+  --lock:#6d7fa2; --lock-soft:rgba(116,134,169,.16);
+  --seg:47,107,255; --sep:rgba(255,255,255,.75);
+  --focus:#1d5bff;
+  --f-display:"Thmanyah Serif Display","Thmanyah Sans","Segoe UI",Tahoma,sans-serif;
+  --f-text:"Thmanyah Serif Text","Thmanyah Sans","Segoe UI",Tahoma,serif;
+  --f-ui:"Thmanyah Sans","Segoe UI",Tahoma,Arial,sans-serif;
+  --r-xl:30px; --r-l:22px; --r-m:16px;
+  --blur:20px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#040b1d; --atmo-a:#040c22; --atmo-b:#0a2156; --atmo-c:#123f92;
+  --orb-a:rgba(37,99,235,.48); --orb-b:rgba(6,182,212,.24); --orb-c:rgba(79,140,255,.3);
+  --band:rgba(110,158,255,.1);
+  --glass:rgba(13,30,70,.5); --glass-2:rgba(20,41,92,.74); --glass-3:rgba(13,30,70,.34);
+  --glass-line:rgba(150,190,255,.2); --hair:rgba(150,190,255,.17); --sheen:rgba(255,255,255,.06);
+  --shadow:0 28px 70px -30px rgba(0,0,0,.8); --shadow-s:0 12px 30px -18px rgba(0,0,0,.7);
+  --ink:#eaf2ff; --ink-2:#bccdef; --ink-3:#93a8d4;
+  --accent:#7ea8ff; --accent-2:#4cc8f6; --accent-soft:rgba(126,168,255,.15); --accent-line:rgba(126,168,255,.36);
+  --btn-a:#3a73ff; --btn-b:#1b4be0; --btn-glow:rgba(58,115,255,.55);
+  --ok:#4ade8f; --ok-soft:rgba(63,216,138,.15);
+  --warn:#fbbf24; --warn-soft:rgba(251,191,36,.14);
+  --danger:#ff7590; --danger-soft:rgba(255,117,144,.14);
+  --lock:#97a8cc; --lock-soft:rgba(134,152,192,.18);
+  --seg:110,158,255; --sep:rgba(4,11,29,.65);
+  --focus:#9cc0ff;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#040b1d; --atmo-a:#040c22; --atmo-b:#0a2156; --atmo-c:#123f92;
+  --orb-a:rgba(37,99,235,.48); --orb-b:rgba(6,182,212,.24); --orb-c:rgba(79,140,255,.3);
+  --band:rgba(110,158,255,.1);
+  --glass:rgba(13,30,70,.5); --glass-2:rgba(20,41,92,.74); --glass-3:rgba(13,30,70,.34);
+  --glass-line:rgba(150,190,255,.2); --hair:rgba(150,190,255,.17); --sheen:rgba(255,255,255,.06);
+  --shadow:0 28px 70px -30px rgba(0,0,0,.8); --shadow-s:0 12px 30px -18px rgba(0,0,0,.7);
+  --ink:#eaf2ff; --ink-2:#bccdef; --ink-3:#93a8d4;
+  --accent:#7ea8ff; --accent-2:#4cc8f6; --accent-soft:rgba(126,168,255,.15); --accent-line:rgba(126,168,255,.36);
+  --btn-a:#3a73ff; --btn-b:#1b4be0; --btn-glow:rgba(58,115,255,.55);
+  --ok:#4ade8f; --ok-soft:rgba(63,216,138,.15);
+  --warn:#fbbf24; --warn-soft:rgba(251,191,36,.14);
+  --danger:#ff7590; --danger-soft:rgba(255,117,144,.14);
+  --lock:#97a8cc; --lock-soft:rgba(134,152,192,.18);
+  --seg:110,158,255; --sep:rgba(4,11,29,.65);
+  --focus:#9cc0ff;
+  color-scheme:dark;
+}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--f-text); font-size:1.0625rem; line-height:1.85;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:clip;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{max-width:100%}
+a{color:var(--accent)}
+h1,h2,h3,h4{margin:0;text-wrap:balance;font-weight:700}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:10px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ic{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;z-index:80;padding:10px 16px;border-radius:12px;background:var(--glass-2);font:700 .95rem/1 var(--f-ui);color:var(--ink);text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+
+/* ---------- atmosphere ---------- */
+.atmo{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+  background:
+    radial-gradient(60vw 50vw at 88% -8%,var(--orb-b),transparent 62%),
+    radial-gradient(55vw 45vw at -6% 38%,var(--orb-a),transparent 64%),
+    radial-gradient(50vw 40vw at 70% 105%,var(--orb-c),transparent 60%),
+    linear-gradient(165deg,var(--atmo-a) 0%,var(--atmo-b) 48%,var(--atmo-c) 100%)}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;animation:drift 28s ease-in-out infinite alternate}
+.o1{width:36vmax;height:36vmax;background:var(--orb-a);top:-14vmax;left:-12vmax}
+.o2{width:28vmax;height:28vmax;background:var(--orb-b);bottom:-10vmax;right:-8vmax;animation-duration:34s}
+.band{position:absolute;left:-30vw;width:160vw;height:11vh;background:linear-gradient(90deg,transparent,var(--band) 30%,var(--band) 70%,transparent);transform:rotate(-15deg)}
+.b1{top:38%}.b2{top:66%;height:6vh;opacity:.7}
+@keyframes drift{to{transform:translate3d(6vmax,4vmax,0) scale(1.08)}}
+
+.page{position:relative;z-index:1;max-width:1180px;margin-inline:auto}
+
+/* ---------- glass primitives ---------- */
+.glass{
+  background:linear-gradient(180deg,var(--sheen),transparent 38%),var(--glass);
+  border:1px solid var(--glass-line); box-shadow:var(--shadow);
+  -webkit-backdrop-filter:blur(var(--blur)) saturate(160%); backdrop-filter:blur(var(--blur)) saturate(160%);
+}
+.tile{background:var(--glass);border:1px solid var(--glass-line);box-shadow:var(--shadow-s)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .glass{background:var(--glass-2)}
+}
+
+/* ---------- buttons & chips ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;font:700 1rem/1 var(--f-ui);padding:1em 1.4em;border-radius:15px;border:1px solid transparent;text-decoration:none;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{color:#fff;background:linear-gradient(135deg,var(--btn-a),var(--btn-b));box-shadow:0 14px 28px -14px var(--btn-glow),inset 0 1px 0 rgba(255,255,255,.28)}
+.btn-ghost{color:var(--ink);background:var(--glass-2);border-color:var(--glass-line);box-shadow:var(--shadow-s)}
+.btn-sm{font-size:.9rem;padding:.75em 1.05em;border-radius:12px}
+.ui{display:inline-block;font:700 .8em/1.25 var(--f-ui);padding:.3em .62em;border-radius:8px;white-space:nowrap;vertical-align:.06em;color:var(--ink);background:var(--glass-2);border:1px solid var(--hair);box-shadow:0 1px 0 var(--hair)}
+.ui.blue{color:#fff;background:linear-gradient(135deg,var(--btn-a),var(--btn-b));border-color:transparent}
+.ui.blue-soft{color:var(--accent);background:var(--accent-soft);border-color:var(--accent-line)}
+.ui.green{color:#fff;background:#0f9a5a;border-color:transparent}
+.ui.green-soft{color:var(--ok);background:var(--ok-soft);border-color:transparent}
+.ui.gray{color:var(--lock);background:var(--lock-soft);border-color:transparent}
+.en{font-family:var(--f-ui)}
+.nb{display:inline-grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;font:700 .78em/1 var(--f-ui);color:#fff;background:linear-gradient(140deg,var(--btn-a),var(--btn-b));vertical-align:.08em;margin-inline:.15em}
+.say{display:inline-flex;align-items:center;gap:.45em;font:700 .85rem/1 var(--f-ui);color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line);padding:.55em .85em;border-radius:999px;cursor:pointer}
+.say:hover{background:var(--glass-2)}
+.say.is-playing{color:#fff;background:linear-gradient(135deg,var(--btn-a),var(--btn-b));border-color:transparent}
+.say.is-playing .ic{animation:pulse .9s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+
+/* ---------- header ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding-block:12px 0}
+.topbar-in{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:20px;
+  background:var(--glass-2);border:1px solid var(--glass-line);box-shadow:var(--shadow-s);
+  -webkit-backdrop-filter:blur(var(--blur)) saturate(170%);backdrop-filter:blur(var(--blur)) saturate(170%)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:none;padding-inline-start:4px}
+.mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;background:linear-gradient(140deg,var(--btn-a),var(--accent-2));box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 18px -10px var(--btn-glow)}
+.mark .ic{width:22px;height:22px}
+.brand-name{display:block;font:700 1.08rem/1 var(--f-ui);direction:ltr}
+.brand-name b{color:var(--accent)}
+.brand-sub{display:block;font:500 .74rem/1 var(--f-ui);color:var(--ink-3);margin-top:5px}
+.nav{display:flex;gap:2px;margin-inline:auto;overflow-x:auto;scrollbar-width:none;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font:500 .92rem/1 var(--f-ui);color:var(--ink-2);text-decoration:none;padding:.68em .78em;border-radius:12px;white-space:nowrap;transition:background-color .2s,color .2s}
+.nav a:hover{background:var(--accent-soft);color:var(--ink)}
+.nav a.is-active{background:var(--accent-soft);color:var(--accent)}
+.top-cta{flex:none}
+@media (max-width:1020px){
+  .topbar-in{flex-wrap:wrap;row-gap:4px}
+  .nav{order:3;flex:1 0 100%;margin-inline:0;
+    -webkit-mask-image:linear-gradient(to left,transparent,#000 14px,#000 calc(100% - 14px),transparent);
+            mask-image:linear-gradient(to left,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
+  .top-cta{margin-inline-start:auto}
+}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:96px}
+@media (max-width:1020px){section{scroll-margin-top:132px}}
+.sec{padding-block:clamp(72px,9vw,124px) 0}
+.sec-head{max-width:780px;margin-bottom:clamp(26px,4vw,42px)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 .86rem/1 var(--f-ui);color:var(--accent);padding:.55em .9em;border-radius:999px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.eyebrow .ic{width:1.1em;height:1.1em}
+h2{font-family:var(--f-display);font-size:clamp(2rem,1.35rem + 2.4vw,3.15rem);line-height:1.32;margin-top:16px;color:var(--ink)}
+h3.sub{font-family:var(--f-display);font-size:clamp(1.45rem,1.2rem + 1vw,1.95rem);line-height:1.4}
+.lead{font-size:clamp(1.08rem,1rem + .35vw,1.24rem);color:var(--ink-2);margin-top:14px;max-width:64ch}
+.panel{border-radius:var(--r-xl);padding:clamp(20px,3vw,34px)}
+.sub-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 20px;margin-bottom:18px}
+.sub-head p{color:var(--ink-2);font-size:1rem;max-width:56ch}
+.block{margin-top:clamp(22px,3vw,30px)}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(30px,4.5vw,60px);align-items:center;padding-block:clamp(40px,6vw,84px) 0}
+.hero h1{font-family:var(--f-display);font-weight:900;font-size:clamp(2.55rem,1.5rem + 4.3vw,4.8rem);line-height:1.24;margin-top:22px;color:var(--ink)}
+.grad{display:block;background:linear-gradient(90deg,var(--accent-2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.1em}
+.hero .lead{margin-top:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding:0;list-style:none}
+.fact{display:flex;align-items:baseline;gap:8px;padding:10px 15px;border-radius:16px;background:var(--glass);border:1px solid var(--glass-line)}
+.fact b{font:900 1.65rem/1 var(--f-display);color:var(--accent)}
+.fact span{font:500 .92rem/1.2 var(--f-ui);color:var(--ink-2)}
+.hero-visual{position:relative;padding-block:22px 40px}
+.device{position:relative;padding:10px;border-radius:26px}
+.device-bar{display:flex;align-items:center;gap:6px;padding:3px 6px 10px}
+.device-bar i{width:10px;height:10px;border-radius:50%;background:var(--hair)}
+.url{margin-inline-start:8px;font:500 .78rem/1 var(--f-ui);color:var(--ink-3);padding:.5em .9em;border-radius:999px;background:var(--glass-3);border:1px solid var(--hair);direction:ltr}
+.device img{display:block;width:100%;height:auto;border-radius:16px}
+.float{position:absolute;z-index:2;border-radius:18px;background:var(--glass-2);border:1px solid var(--glass-line);box-shadow:var(--shadow-s);
+  -webkit-backdrop-filter:blur(16px) saturate(170%);backdrop-filter:blur(16px) saturate(170%)}
+.f-online{top:0;inset-inline-start:26px;display:flex;align-items:center;gap:9px;padding:10px 14px;font:700 .9rem/1 var(--f-ui)}
+.dot{width:10px;height:10px;border-radius:50%;background:#16b46d;box-shadow:0 0 0 4px rgba(22,180,109,.2)}
+.f-bubble{bottom:0;inset-inline-end:18px;display:flex;align-items:center;gap:12px;padding:10px 14px 10px 12px;max-width:calc(100% - 36px)}
+.f-bubble img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px var(--glass-line)}
+.f-bubble p{font:700 .92rem/1.35 var(--f-ui);direction:ltr;text-align:left;color:var(--ink)}
+.f-bubble small{display:block;font:500 .74rem/1.3 var(--f-ui);color:var(--ink-3);margin-top:3px}
+.wave{display:flex;align-items:center;gap:3px;height:26px;flex:none}
+.wave span{width:3px;height:calc(var(--h) * 100%);border-radius:3px;background:linear-gradient(var(--accent-2),var(--accent));animation:wv 1.15s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes wv{50%{transform:scaleY(.3)}}
+@media (max-width:980px){.hero{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.wave{display:none}.f-online{inset-inline-start:14px}.f-bubble{inset-inline-end:10px;max-width:calc(100% - 20px)}}
+
+/* ---------- prepare ---------- */
+.prep{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:900px){.prep{grid-template-columns:minmax(0,1fr)}}
+.ready-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.ready-head h3{font:700 1.15rem/1.3 var(--f-ui)}
+.ready-count{font:700 .95rem/1 var(--f-ui);color:var(--ink-2)}
+.ready-count b{font:900 1.35rem/1 var(--f-display);color:var(--accent)}
+.meter{flex:1 1 140px;height:9px;border-radius:99px;background:var(--glass-3);border:1px solid var(--hair);overflow:hidden}
+.meter i{display:block;height:100%;width:var(--p,0%);border-radius:inherit;background:linear-gradient(to left,var(--accent),var(--accent-2));transition:width .45s ease}
+.ready-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ready-item{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-radius:18px;background:var(--glass-3);border:1px solid var(--hair);cursor:pointer;transition:background-color .2s,border-color .2s}
+.ready-item:hover{background:var(--glass-2)}
+.ready-item input{appearance:none;-webkit-appearance:none;margin:3px 0 0;width:26px;height:26px;flex:none;border-radius:9px;border:1.6px solid var(--accent-line);background:var(--glass-2);display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.ready-item input::after{content:"";width:11px;height:6px;border:2.6px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.ready-item input:checked{background:linear-gradient(135deg,var(--btn-a),var(--btn-b));border-color:transparent}
+.ready-item input:checked::after{opacity:1}
+.ready-item:has(input:checked){border-color:var(--accent-line);background:var(--accent-soft)}
+.ri-ico{width:42px;height:42px;flex:none;border-radius:13px;display:grid;place-items:center;color:var(--accent);background:var(--glass-2);border:1px solid var(--glass-line)}
+.ri-text b{display:block;font:700 1.02rem/1.4 var(--f-ui)}
+.ri-text > span{display:block;font-size:.98rem;line-height:1.75;color:var(--ink-2);margin-top:2px}
+.ready-done{margin-top:14px;display:flex;align-items:center;gap:10px;font:700 .95rem/1.4 var(--f-ui);color:var(--ok)}
+.rules h3{display:flex;align-items:center;gap:10px;font:700 1.15rem/1.3 var(--f-ui);margin-bottom:14px}
+.rules h3 .ic{color:var(--accent)}
+.rules ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.rules li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;font-size:1rem;line-height:1.8;color:var(--ink-2)}
+.rules li .ic{margin-top:.3em;color:var(--accent)}
+
+/* ---------- steps ---------- */
+.step-index{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+.step-index a{display:inline-flex;align-items:center;gap:8px;padding:.45em .9em .45em .6em;border-radius:999px;background:var(--glass);border:1px solid var(--glass-line);color:var(--ink-2);font:500 .9rem/1 var(--f-ui);text-decoration:none;transition:background-color .2s}
+.step-index a:hover{background:var(--glass-2);color:var(--ink)}
+.step-index b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .8rem/1 var(--f-ui)}
+.steps{display:grid;gap:clamp(18px,2.6vw,28px)}
+.step{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr);gap:clamp(22px,3.6vw,46px);align-items:center;border-radius:var(--r-xl);padding:clamp(20px,3vw,36px);scroll-margin-top:110px}
+.step.flip .step-text{order:2}
+.step.wide{grid-template-columns:minmax(0,1fr);align-items:start}
+.step.wide .step-text{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8px 44px;align-items:start}
+.step.wide .step-head{margin:0}
+.step.wide .more{margin-top:4px;align-self:start}
+@media (max-width:900px){
+  .step{grid-template-columns:minmax(0,1fr)}
+  .step.flip .step-text{order:0}
+  .step.wide .step-text{grid-template-columns:minmax(0,1fr)}
+  .step.wide .step-head{margin-bottom:8px}
+}
+.step-head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.step-num{font:900 clamp(2.7rem,2rem + 2vw,3.7rem)/1 var(--f-display);background:linear-gradient(160deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;padding:.06em 0 .12em;flex:none}
+.step h3{font-family:var(--f-display);font-size:clamp(1.45rem,1.18rem + 1.05vw,2rem);line-height:1.4}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.ticks li{position:relative;padding-inline-start:26px}
+.ticks li::before{content:"";position:absolute;inset-inline-start:3px;top:.74em;width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--accent-2),var(--accent));box-shadow:0 0 0 4px var(--accent-soft)}
+.note{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:12px 14px;border-radius:14px;background:var(--accent-soft);border:1px solid var(--accent-line);font:500 .95rem/1.7 var(--f-ui);color:var(--ink-2)}
+.note .ic{margin-top:.2em;color:var(--accent)}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:700 .95rem/1 var(--f-ui);text-decoration:none}
+.more:hover{text-decoration:underline;text-underline-offset:4px}
+.quote-line{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:6px}
+.ticks .en,.map-legend .en,.q-tell .en,.mic-card .en{white-space:nowrap}
+.quote-line .en{font-weight:700;color:var(--ink);white-space:normal}
+
+/* screenshot figure */
+.shot{margin:0;display:grid;gap:12px;min-width:0;justify-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:4px;padding:5px;border-radius:14px;background:var(--glass-3);border:1px solid var(--hair);max-width:100%}
+.seg button{font:700 .84rem/1.2 var(--f-ui);color:var(--ink-2);padding:.62em .9em;border-radius:10px;border:0;background:transparent;cursor:pointer;transition:background-color .2s,color .2s}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-selected="true"]{background:var(--glass-2);color:var(--accent);box-shadow:var(--shadow-s)}
+.frame{width:fit-content;max-width:100%;padding:8px;border-radius:20px;background:var(--glass-2);border:1px solid var(--glass-line);box-shadow:var(--shadow-s)}
+.frame-bar{display:flex;align-items:center;gap:5px;padding:2px 4px 8px}
+.frame-bar i{width:8px;height:8px;border-radius:50%;background:var(--hair)}
+.frame-bar span{margin-inline-start:8px;font:500 .72rem/1 var(--f-ui);color:var(--ink-3);direction:ltr}
+.stage{position:relative;border-radius:12px;overflow:hidden}
+.state{position:relative}
+.state.enter{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.zoom{display:block;padding:0;border:0;background:none;cursor:zoom-in;width:100%}
+.zoom img{display:block;width:auto;max-width:100%;height:auto;margin-inline:auto}
+.frame-bar::after{content:"";margin-left:auto;width:16px;height:16px;background:var(--ink-3);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.8' cy='10.8' r='6.3'/%3E%3Cpath d='M20 20l-4.6-4.6M10.8 8.3v5M8.3 10.8h5'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.8' cy='10.8' r='6.3'/%3E%3Cpath d='M20 20l-4.6-4.6M10.8 8.3v5M8.3 10.8h5'/%3E%3C/svg%3E") center/contain no-repeat}
+.pin{position:absolute;left:var(--x);top:max(16px,var(--y));transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:700 13px/1 var(--f-ui);color:#fff;background:linear-gradient(140deg,var(--btn-a),var(--btn-b));box-shadow:0 0 0 3px rgba(255,255,255,.92),0 6px 16px rgba(10,30,90,.38);pointer-events:none}
+.pin::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid rgba(47,107,255,.6);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.75);opacity:.9}100%{transform:scale(1.55);opacity:0}}
+.shot-cap{display:flex;align-items:flex-start;gap:8px;font:500 .9rem/1.6 var(--f-ui);color:var(--ink-3);max-width:62ch;text-align:center;justify-content:center}
+
+/* ---------- session ---------- */
+.tl-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px;margin-bottom:16px}
+.tl-top h3{font:700 1.15rem/1.3 var(--f-ui)}
+.tl-total{font:700 .95rem/1 var(--f-ui);color:var(--ink-2)}
+.tl-total b{font:900 1.5rem/1 var(--f-display);color:var(--accent)}
+.tl-bar{display:flex;height:66px;border-radius:16px;overflow:hidden;border:1px solid var(--glass-line)}
+.tl-seg{flex:var(--m) 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:3px;font:700 .95rem/1 var(--f-ui);color:var(--ink);background:rgba(var(--seg),var(--a));transition:filter .2s}
+.tl-seg:not(:last-child){box-shadow:inset 2px 0 0 var(--sep)}
+.tl-seg.main{background:linear-gradient(135deg,var(--btn-a),var(--btn-b));color:#fff}
+.tl-seg.is-hot{filter:brightness(1.12) saturate(1.25)}
+.tl-seg small{font:500 .74rem/1 var(--f-ui);opacity:.8;margin-inline-start:3px}
+.tl-ticks{position:relative;height:24px;margin-top:8px;font:500 .78rem/1 var(--f-ui);color:var(--ink-3)}
+.tl-ticks span{position:absolute;top:4px;inset-inline-start:var(--p);transform:translateX(50%);white-space:nowrap}
+.tl-ticks span:first-child{transform:none}
+.tl-ticks span:last-child{transform:translateX(100%)}
+@media (max-width:640px){.tl-ticks .t-minor{display:none}}
+.stages{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.stage-card{padding:14px;border-radius:18px;background:var(--glass-3);border:1px solid var(--hair);transition:background-color .2s,border-color .2s}
+.stage-card.is-hot{background:var(--accent-soft);border-color:var(--accent-line)}
+.sw{display:block;width:30px;height:8px;border-radius:99px;background:rgba(var(--seg),var(--a));margin-bottom:10px}
+.sw.main{background:linear-gradient(135deg,var(--btn-a),var(--btn-b))}
+.stage-card h4{font:700 1rem/1.35 var(--f-ui)}
+.stage-card .en{display:block;font:500 .78rem/1.3 var(--f-ui);color:var(--ink-3);direction:ltr;text-align:right;margin-top:3px}
+.stage-card p{font-size:.95rem;line-height:1.7;color:var(--ink-2);margin-top:8px}
+.stage-card .min{font:700 .82rem/1 var(--f-ui);color:var(--accent);margin-top:10px;display:block}
+@media (max-width:1000px){
+  .stages{grid-template-columns:minmax(0,1fr)}
+  .stage-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 14px;align-items:start}
+  .stage-card .sw{grid-row:span 2;width:8px;height:auto;align-self:stretch;margin:0}
+  .stage-card .min{margin:0;grid-column:3;grid-row:1}
+  .stage-card p{grid-column:2 / 4;margin-top:2px}
+}
+
+/* interface map */
+.map-view{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:1898/956;box-shadow:var(--shadow-s);border:1px solid var(--glass-line)}
+.map-inner{position:absolute;inset:0;transform-origin:0 0;transition:transform .65s cubic-bezier(.2,.75,.2,1);--s:1}
+.map-inner img{display:block;width:100%;height:100%}
+.hot{position:absolute;left:var(--x);top:var(--y);width:30px;height:30px;margin:-15px 0 0 -15px;padding:0;border-radius:50%;border:0;display:grid;place-items:center;font:700 13px/1 var(--f-ui);color:#fff;background:linear-gradient(140deg,var(--btn-a),var(--btn-b));box-shadow:0 0 0 3px rgba(255,255,255,.92),0 8px 18px rgba(0,10,40,.45);cursor:pointer;transform:scale(calc(1 / var(--s)));transition:transform .65s cubic-bezier(.2,.75,.2,1),background .2s}
+.hot.is-on{background:linear-gradient(140deg,#19c37d,#0b8a4f)}
+.map-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.map-tools p{font:500 .9rem/1.5 var(--f-ui);color:var(--ink-3)}
+.map-legend{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.map-legend button{display:flex;gap:12px;align-items:flex-start;width:100%;height:100%;text-align:start;padding:12px 14px;border-radius:16px;border:1px solid var(--hair);background:var(--glass-3);cursor:pointer;transition:background-color .2s,border-color .2s}
+.map-legend button:hover{background:var(--glass-2)}
+.map-legend button.is-on{border-color:var(--accent-line);background:var(--accent-soft)}
+.map-legend .nb{font-size:.8rem;margin:2px 0 0;flex:none}
+.map-legend b{display:block;font:700 .98rem/1.4 var(--f-ui)}
+.map-legend span.d{display:block;font-size:.93rem;line-height:1.7;color:var(--ink-2);margin-top:2px}
+@media (max-width:900px){.map-legend{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.map-legend{grid-template-columns:minmax(0,1fr)}.hot{width:24px;height:24px;margin:-12px 0 0 -12px;font-size:11px}}
+
+/* mic states */
+.mics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.mics{grid-template-columns:minmax(0,1fr)}}
+.mic-card{border-radius:var(--r-l);padding:20px;text-align:center;display:grid;justify-items:center;gap:10px;align-content:start}
+.mic-row{display:flex;align-items:center;justify-content:center;gap:14px;height:86px;direction:ltr}
+.mic-btn{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none}
+.mic-btn .ic{width:26px;height:26px}
+.m-idle{background:radial-gradient(circle at 32% 28%,#5b8dff,#1d3fae);box-shadow:0 0 0 6px rgba(47,107,255,.18),0 10px 24px -10px rgba(29,63,174,.8)}
+.m-live{background:radial-gradient(circle at 32% 28%,#3ee6a5,#0b8a52);animation:live 1.6s ease-out infinite}
+.m-live i{width:18px;height:18px;border-radius:4px;background:#fff}
+.m-think{background:var(--glass-2);border:1px solid var(--glass-line);overflow:hidden;padding:0}
+.m-think img{width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(30,200,130,.55)}100%{box-shadow:0 0 0 18px rgba(30,200,130,0)}}
+.mini-wave{display:flex;gap:3px;align-items:center;height:30px}
+.mini-wave span{width:3px;height:calc(var(--h) * 100%);border-radius:2px;background:#19c37d;animation:wv 1s ease-in-out infinite;animation-delay:var(--d)}
+.dots3{display:flex;gap:5px}
+.dots3 span{width:7px;height:7px;border-radius:50%;background:var(--ink-3);animation:bob 1.2s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes bob{50%{transform:translateY(-5px);opacity:.5}}
+.mic-label{font:700 .78rem/1 var(--f-ui);direction:ltr;padding:.5em .8em;border-radius:999px;background:var(--glass-3);border:1px solid var(--hair);color:var(--ink-2)}
+.mic-card h4{font:700 1.05rem/1.3 var(--f-ui)}
+.mic-card p{font-size:.97rem;line-height:1.75;color:var(--ink-2)}
+
+/* ---------- talk ---------- */
+.cycle{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.cycle li{position:relative;padding:18px 16px;border-radius:20px}
+.cycle li:not(:last-child)::after{content:"";position:absolute;top:50%;inset-inline-end:-12px;width:9px;height:9px;border-top:2.4px solid var(--accent);border-left:2.4px solid var(--accent);transform:translate(50%,-50%) rotate(-45deg);z-index:2}
+.cycle .nb{width:30px;height:30px;font-size:.85rem;margin:0 0 10px}
+.cycle h4{font:700 1.05rem/1.3 var(--f-ui)}
+.cycle p{font-size:.95rem;line-height:1.7;color:var(--ink-2);margin-top:6px}
+@media (max-width:980px){
+  .cycle{grid-template-columns:minmax(0,1fr);gap:18px}
+  .cycle li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 14px}
+  .cycle .nb{grid-row:span 2;margin:0}
+  .cycle p{margin-top:0}
+  .cycle li:not(:last-child)::after{top:auto;bottom:-14px;inset-inline-end:auto;left:50%;transform:translate(-50%,0) rotate(-135deg)}
+}
+.phrases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.phrases{grid-template-columns:minmax(0,1fr)}}
+.phrase{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 14px;padding:18px 20px;border-radius:20px}
+.phrase .p-en{font:700 1.15rem/1.45 var(--f-ui);direction:ltr;text-align:right;color:var(--ink)}
+.phrase .p-ar{font-size:1rem;line-height:1.6;color:var(--ink-2);grid-column:1}
+.phrase .say{grid-column:2;grid-row:1 / span 2}
+.fb{border-radius:var(--r-xl);padding:clamp(18px,3vw,32px)}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;padding:5px;border-radius:16px;background:var(--glass-3);border:1px solid var(--hair);width:fit-content;max-width:100%}
+.tabs button{font:700 .92rem/1.2 var(--f-ui);color:var(--ink-2);padding:.7em 1em;border-radius:12px;border:0;background:transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.tabs button[aria-selected="true"]{background:var(--glass-2);color:var(--accent);box-shadow:var(--shadow-s)}
+.lvl{font:700 .72rem/1 var(--f-ui);padding:.35em .5em;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.fb-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);align-items:center;margin-top:22px}
+@media (max-width:860px){.fb-body{grid-template-columns:minmax(0,1fr)}}
+.chat{display:grid;gap:12px;padding:18px;border-radius:20px;background:var(--glass-3);border:1px solid var(--hair)}
+.msg{display:flex;gap:10px;align-items:flex-end}
+.msg.ahmad{justify-content:flex-end}
+.av{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;overflow:hidden;font:700 .72rem/1 var(--f-ui);color:var(--ink-2);background:var(--glass-2);border:1px solid var(--glass-line)}
+.av img{width:100%;height:100%;object-fit:cover}
+.bubble{max-width:min(440px,82%);padding:11px 15px;border-radius:18px;font:500 1.02rem/1.6 var(--f-ui);direction:ltr;text-align:left}
+.me .bubble{background:var(--glass-2);border:1px solid var(--glass-line);color:var(--ink);border-bottom-right-radius:6px}
+.ahmad .bubble{background:linear-gradient(140deg,var(--btn-a),var(--btn-b));color:#fff;border-bottom-left-radius:6px}
+.bubble .who{display:block;font:700 .72rem/1 var(--f-ui);opacity:.75;margin-bottom:6px;direction:rtl;text-align:right}
+.err{text-decoration:underline wavy var(--danger);text-underline-offset:5px;text-decoration-thickness:1.5px}
+.fix{font-weight:700;padding:0 .3em;border-radius:6px;background:rgba(255,255,255,.24)}
+.me .fix{background:var(--ok-soft);color:var(--ok)}
+.correct{display:grid;gap:8px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.16);margin-top:10px}
+.correct .c-line{display:flex;align-items:center;gap:8px;font-weight:700}
+.correct .c-line .ic{width:18px;height:18px;flex:none}
+.correct small{font:500 .9rem/1.5 var(--f-ui);opacity:.92}
+.correct .say{justify-self:start;color:#fff;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35)}
+.fb-explain h4{font:700 1.15rem/1.4 var(--f-ui);margin-bottom:8px}
+.fb-explain p{color:var(--ink-2)}
+.fb-foot{margin-top:20px;display:flex;align-items:center;gap:10px;font:700 .95rem/1.5 var(--f-ui);color:var(--ink-2)}
+.fb-foot .ic{color:var(--accent)}
+
+/* ---------- scenarios ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:18px;padding:0;list-style:none;font:500 .92rem/1.4 var(--f-ui);color:var(--ink-2)}
+.legend li{display:flex;align-items:center;gap:8px}
+.scen{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1000px){.scen{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.scen{grid-template-columns:minmax(0,1fr)}}
+.sc{padding:18px;border-radius:22px;display:grid;gap:10px;align-content:start}
+.sc-top{display:flex;align-items:center;justify-content:space-between}
+.sc-num{font:900 2rem/1 var(--f-display);color:var(--accent);padding-top:.08em}
+.sc-ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line)}
+.sc-ico .ic{width:22px;height:22px}
+.sc h4{font:700 1.05rem/1.5 var(--f-ui)}
+.sc .sc-en{font:500 .85rem/1.4 var(--f-ui);color:var(--ink-3);direction:ltr;text-align:right}
+
+/* ---------- help ---------- */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+@media (max-width:900px){.faq{grid-template-columns:minmax(0,1fr)}}
+.q{border-radius:20px;overflow:hidden}
+.q summary{list-style:none;display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;font:700 1.02rem/1.45 var(--f-ui)}
+.q summary::-webkit-details-marker{display:none}
+.q-ico{width:38px;height:38px;flex:none;border-radius:12px;display:grid;place-items:center;color:var(--accent);background:var(--accent-soft)}
+.chev{margin-inline-start:auto;color:var(--ink-3);transition:transform .25s}
+.q[open] .chev{transform:rotate(180deg)}
+.q-body{padding:0 18px 18px;display:grid;gap:10px}
+.q-try{color:var(--ink-2);font-size:1rem;line-height:1.85}
+.q-try b,.q-tell b{font-family:var(--f-ui);font-weight:700}
+.q-try b{color:var(--accent)}
+.q-tell{padding:10px 13px;border-radius:12px;background:var(--warn-soft);font:500 .93rem/1.65 var(--f-ui);color:var(--ink)}
+.q-tell b{color:var(--warn)}
+.path{display:inline-flex;flex-wrap:wrap;gap:4px;align-items:center}
+.callout{margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;border-radius:var(--r-xl);padding:clamp(18px,3vw,28px)}
+.callout-ico{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;color:#fff;background:linear-gradient(140deg,var(--btn-a),var(--btn-b))}
+.callout h3{font:700 1.15rem/1.4 var(--f-ui)}
+.callout ul{margin:10px 0 0;padding-inline-start:20px;display:grid;gap:6px;color:var(--ink-2)}
+.callout p{margin-top:10px;font:500 .95rem/1.6 var(--f-ui);color:var(--ink-2)}
+
+/* ---------- teacher ---------- */
+.plan-rows{margin-top:18px;display:grid}
+.pr{display:grid;grid-template-columns:130px minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--hair);align-items:start}
+.pr.head{border-top:0;padding-top:0;font:700 .85rem/1.2 var(--f-ui);color:var(--ink-3)}
+.pr .t{font:700 .95rem/1.5 var(--f-ui);color:var(--accent)}
+.pr .c{font-size:1rem;line-height:1.75;color:var(--ink-2)}
+.pr .c em{display:none;font:700 .78rem/1 var(--f-ui);font-style:normal;color:var(--ink-3);margin-bottom:4px}
+@media (max-width:700px){
+  .pr{grid-template-columns:minmax(0,1fr);gap:6px}
+  .pr.head{display:none}
+  .pr .c em{display:block}
+}
+.t-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;margin-top:20px;align-items:start}
+@media (max-width:900px){.t-grid{grid-template-columns:minmax(0,1fr)}}
+.script blockquote{margin:12px 0 0;font-size:1.14rem;line-height:1.95;color:var(--ink);padding-inline-start:18px;border-inline-start:3px solid var(--accent-line)}
+.script .btn{margin-top:16px}
+.card-title{display:flex;align-items:center;gap:10px;font:700 1.12rem/1.35 var(--f-ui)}
+.card-title .ic{color:var(--accent)}
+.qs{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px;counter-reset:q}
+.qs li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;color:var(--ink-2);line-height:1.75}
+.qs li::before{counter-increment:q;content:counter(q);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;margin-top:.1em;font:700 .8rem/1 var(--f-ui);color:var(--accent);background:var(--accent-soft)}
+.decision{margin-top:16px;font:500 .95rem/1.7 var(--f-ui);color:var(--ink-2);padding:12px 14px;border-radius:14px;background:var(--ok-soft)}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+@media (max-width:1000px){.tri{grid-template-columns:minmax(0,1fr)}}
+.tcard{border-radius:var(--r-l);padding:22px}
+.tcard ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.tcard li{position:relative;padding-inline-start:24px;font-size:.98rem;line-height:1.8;color:var(--ink-2)}
+.tcard li::before{content:"";position:absolute;inset-inline-start:2px;top:.62em;width:12px;height:7px;border:2.2px solid var(--accent);border-top:0;border-right:0;transform:rotate(-45deg)}
+.fields{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.fields li{font:700 .85rem/1 var(--f-ui);padding:.55em .8em;border-radius:999px;background:var(--glass-3);border:1px solid var(--hair);color:var(--ink-2)}
+.t-note{margin-top:14px;color:var(--ink-2);font-size:.98rem;line-height:1.8}
+
+/* ---------- footer ---------- */
+.foot{margin-top:clamp(72px,9vw,120px);margin-bottom:16px;border-radius:var(--r-xl);padding:clamp(20px,3vw,30px);display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between}
+.foot .brand-name{font-size:1.2rem}
+.tagline{font:500 .82rem/1 var(--f-ui);color:var(--ink-3);direction:ltr;margin-top:6px;display:block;text-align:right}
+.credit{font:500 .95rem/1.6 var(--f-ui);color:var(--ink-2)}
+.credit b{color:var(--ink)}
+.foot-links{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- lightbox ---------- */
+dialog.lb{padding:0;border:0;background:transparent;max-width:min(96vw,1700px);max-height:94vh;overflow:visible}
+dialog.lb::backdrop{background:rgba(3,10,28,.66);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lb-in{position:relative;display:grid;gap:10px;justify-items:center}
+.lb img{display:block;max-width:min(96vw,1700px);max-height:84vh;width:auto;height:auto;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#fff}
+.lb-cap{font:500 .95rem/1.5 var(--f-ui);color:#eaf2ff;text-align:center;max-width:70ch}
+.lb-close{position:absolute;top:-14px;left:-14px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(10,27,61,.7);color:#fff;display:grid;place-items:center;cursor:pointer}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-mark" viewBox="0 0 24 24"><path d="M4.5 6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 17 16h-6l-4.5 3.8V16H7a2.5 2.5 0 0 1-2.5-2.5z"/><path d="M9.3 8.4v3.2M12 7.4v5.2M14.7 8.4v3.2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.6-3.8 3.7-6 7.5-6s6.9 2.2 7.5 6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 9.8h17M8 3v4M16 3v4M8 13.6h2M14 13.6h2M8 16.8h2"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.6 5.6 1.9-5.6 1.9L12 18.5l-1.9-5.6L4.5 11l5.6-1.9z"/></symbol>
+    <symbol id="i-chatq" viewBox="0 0 24 24"><path d="M4.5 6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 17 16h-6l-4.5 3.8V16H7a2.5 2.5 0 0 1-2.5-2.5z"/><path d="M10.2 8.6a1.9 1.9 0 1 1 2.5 1.8c-.5.2-.8.6-.8 1.1v.2M11.9 13.3v.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 19.5s-7.5-4.4-7.5-10a4.2 4.2 0 0 1 7.5-2.6 4.2 4.2 0 0 1 7.5 2.6c0 5.6-7.5 10-7.5 10z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.5 20.5h5"/><path d="M8.6 14.6A6 6 0 1 1 15.4 14.6c-.6.5-.9 1.1-.9 1.8v1.1h-5v-1.1c0-.7-.3-1.3-.9-1.8z"/></symbol>
+    <symbol id="i-hist" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4.5v4h4"/><path d="M12 8v4.2l2.8 1.8"/></symbol>
+    <symbol id="i-browser" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.6"/><path d="M3 9h18M6.2 6.8h.01M8.8 6.8h.01"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4.5 14v-1.5a7.5 7.5 0 0 1 15 0V14"/><rect x="3.5" y="13" width="4" height="6" rx="1.8"/><rect x="16.5" y="13" width="4" height="6" rx="1.8"/><path d="M18.5 19v.4a2.5 2.5 0 0 1-2.5 2.5h-2.5"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.6"/><circle cx="8.8" cy="10.8" r="2.1"/><path d="M5.6 16.2c.6-1.4 1.7-2.1 3.2-2.1s2.6.7 3.2 2.1M14.5 9.8h4M14.5 13.2h3"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.8 9.2a13.5 13.5 0 0 1 18.4 0M5.8 12.6a9 9 0 0 1 12.4 0M8.9 15.9a4.6 4.6 0 0 1 6.2 0M12 19.2h.01"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10.2 13.8a3.8 3.8 0 0 0 5.4 0l3-3a3.8 3.8 0 0 0-5.4-5.4l-.9.9"/><path d="M13.8 10.2a3.8 3.8 0 0 0-5.4 0l-3 3a3.8 3.8 0 0 0 5.4 5.4l.9-.9"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.8 21h6.4"/></symbol>
+    <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 6.6a7.6 7.6 0 0 1 0 10.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.6l4.3 4.2L19 7.2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.6"/><path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5.5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2.4"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3"/><path d="M20 20l-4.6-4.6M10.8 8.3v5M8.3 10.8h5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 11v5.2M12 7.7v.01"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M9.7 9.4a2.4 2.4 0 1 1 3.3 2.2c-.6.3-1 .8-1 1.5v.4M12 16.5v.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.2l7.2 2.9v5.4c0 4.4-3 8-7.2 9.3-4.2-1.3-7.2-4.9-7.2-9.3V6.1z"/><path d="M9.1 12.1l2.1 2.1 3.9-4"/></symbol>
+    <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="11.5" rx="2"/><path d="M8.5 20l3.5-4.5 3.5 4.5M7 8.5h6M7 11.5h4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6.5 9.5l5.5 5.5 5.5-5.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.6V12l2.9 1.9"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4.2l8.6 15H3.4z"/><path d="M12 10v4.2M12 16.9v.01"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r=".9"/></symbol>
+    <symbol id="i-steps" viewBox="0 0 24 24"><path d="M4 18h5v-5h5V8h6"/><path d="M16.5 5l3.5 3-3.5 3"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.8"/><rect x="13" y="4" width="7" height="7" rx="1.8"/><rect x="4" y="13" width="7" height="7" rx="1.8"/><rect x="13" y="13" width="7" height="7" rx="1.8"/></symbol>
+  </defs>
+</svg>
+
+<div class="atmo" aria-hidden="true"><span class="band b1"></span><span class="band b2"></span><span class="orb o1"></span><span class="orb o2"></span></div>
+
+<div class="page" dir="rtl" lang="ar">
+<a class="skip" href="#steps">انتقل إلى خطوات الاستخدام</a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top" aria-label="SpeakBetter، العودة إلى البداية">
+      <span class="mark"><svg class="ic"><use href="#i-mark"/></svg></span>
+      <span><span class="brand-name"><b>Speak</b>Better</span><span class="brand-sub">دليل الاستخدام</span></span>
+    </a>
+    <nav class="nav" aria-label="أقسام الدليل">
+      <a href="#prepare">قبل البدء</a>
+      <a href="#steps">الخطوات</a>
+      <a href="#session">داخل الجلسة</a>
+      <a href="#talk">المحادثة</a>
+      <a href="#sessions">الجلسات</a>
+      <a href="#help">حل المشكلات</a>
+      <a href="#teacher">للمعلم</a>
+    </nav>
+    <a class="btn btn-primary btn-sm top-cta" href="https://speakbetter.me" target="_blank" rel="noopener">افتح البيئة <svg class="ic"><use href="#i-ext"/></svg></a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== hero ===== -->
+<section id="top" class="hero" aria-labelledby="hero-title">
+  <div>
+    <span class="eyebrow"><svg class="ic"><use href="#i-mark"/></svg> بيئة SpeakBetter · الصف الأول الثانوي</span>
+    <h1 id="hero-title">تحدّث الإنجليزية مع أحمد<span class="grad">خطوةً بخطوة</span></h1>
+    <p class="lead">يرافقك هذا الدليل من الدخول برمزك حتى إتمام الجلسة. ستتحاور بالإنجليزية مع أحمد، شريكك الافتراضي في المحادثة، في مواقف من الحياة اليومية، ويشرف معلمك على كل خطوة.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#steps">ابدأ الجولة <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="https://speakbetter.me" target="_blank" rel="noopener">افتح البيئة <svg class="ic"><use href="#i-ext"/></svg></a>
+    </div>
+    <ul class="facts" aria-label="الجلسات بالأرقام">
+      <li class="fact"><b>8</b><span>جلسات متدرجة</span></li>
+      <li class="fact"><b>5</b><span>مراحل في كل جلسة</span></li>
+      <li class="fact"><b>40</b><span>دقيقة للجلسة</span></li>
+    </ul>
+  </div>
+  <div class="hero-visual">
+    <div class="device glass">
+      <div class="device-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span class="url">speakbetter.me</span></div>
+      <img src="s-intro-960.webp" srcset="s-intro-960.webp 960w, s-intro-1600.webp 1600w" sizes="(max-width: 980px) 94vw, 560px" width="1600" height="803" alt="أحمد يرحب بالطالب في مقهى الجلسة الأولى، وبجانبه بطاقة موقف اليوم ورسالته المكتوبة">
+    </div>
+    <div class="float f-online"><span class="dot"></span>أحمد متصل الآن</div>
+    <div class="float f-bubble">
+      <img src="ahmad-face.webp" width="168" height="168" alt="">
+      <div><p>Hi! Let's practice English together!</p><small>أحمد يبدأ الحديث</small></div>
+      <div class="wave" aria-hidden="true">
+        <span style="--h:.35;--d:-.1s"></span><span style="--h:.7;--d:-.5s"></span><span style="--h:.5;--d:-.3s"></span><span style="--h:.95;--d:-.8s"></span><span style="--h:.6;--d:-.2s"></span><span style="--h:.8;--d:-.65s"></span><span style="--h:.4;--d:-.4s"></span><span style="--h:.75;--d:-.9s"></span><span style="--h:.5;--d:-.15s"></span><span style="--h:.3;--d:-.7s"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== prepare ===== -->
+<section id="prepare" class="sec" aria-labelledby="prepare-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-check"/></svg> قبل البدء</span>
+    <h2 id="prepare-title">جهّز نفسك قبل أن تفتح البيئة</h2>
+    <p class="lead">خمسة أشياء تحمي وقت محادثتك من الأعطال. علّم على كل ما جهّزته.</p>
+  </div>
+  <div class="prep">
+    <div class="panel glass" id="ready">
+      <div class="ready-head">
+        <h3>قائمة الجاهزية</h3>
+        <span class="ready-count" aria-live="polite"><b id="ready-count">0</b> من 5</span>
+        <span class="meter" aria-hidden="true"><i id="ready-meter"></i></span>
+      </div>
+      <ul class="ready-list">
+        <li><label class="ready-item" for="r1"><input type="checkbox" id="r1"><span class="ri-ico"><svg class="ic"><use href="#i-browser"/></svg></span><span class="ri-text"><b>متصفح إنترنت</b><span>افتح البيئة في أي متصفح على جهاز المدرسة أو جهازك.</span></span></label></li>
+        <li><label class="ready-item" for="r2"><input type="checkbox" id="r2"><span class="ri-ico"><svg class="ic"><use href="#i-headset"/></svg></span><span class="ri-text"><b>سماعة رأس بميكروفون</b><span>تسمع بها أحمد بوضوح، ويُلتقط صوتك دون تداخل أصوات زملائك.</span></span></label></li>
+        <li><label class="ready-item" for="r3"><input type="checkbox" id="r3"><span class="ri-ico"><svg class="ic"><use href="#i-id"/></svg></span><span class="ri-text"><b>رمزك البحثي</b><span>يسلّمه لك معلمك بصيغة مثل <span class="en" dir="ltr">STU1-001</span>، وهو حسابك داخل البيئة.</span></span></label></li>
+        <li><label class="ready-item" for="r4"><input type="checkbox" id="r4"><span class="ri-ico"><svg class="ic"><use href="#i-wifi"/></svg></span><span class="ri-text"><b>مكان هادئ واتصال مستقر</b><span>كلما قلّت الضوضاء حولك فُهم كلامك بدقة أكبر.</span></span></label></li>
+        <li><label class="ready-item" for="r5"><input type="checkbox" id="r5"><span class="ri-ico"><svg class="ic"><use href="#i-link"/></svg></span><span class="ri-text"><b>رابط البيئة</b><span>اكتب <span class="en" dir="ltr">speakbetter.me</span> في شريط العنوان، أو استخدم زر «افتح البيئة».</span></span></label></li>
+      </ul>
+      <p class="ready-done" id="ready-done" hidden><svg class="ic"><use href="#i-check"/></svg> أنت جاهز. انتقل إلى الخطوة الأولى.</p>
+    </div>
+    <aside class="panel glass rules" aria-labelledby="rules-title">
+      <h3 id="rules-title"><svg class="ic"><use href="#i-shield"/></svg> رمزك أمانة</h3>
+      <ul>
+        <li><svg class="ic"><use href="#i-id"/></svg><span>ادخل برمزك أنت فقط، ولا تستخدم رمز زميلك ولو لتجربة البيئة.</span></li>
+        <li><svg class="ic"><use href="#i-browser"/></svg><span>استخدم رمزك على جهاز واحد في الوقت نفسه، فالجلسة ترتبط بالجهاز الذي بدأتها عليه.</span></li>
+        <li><svg class="ic"><use href="#i-info"/></svg><span>تُحفظ محادثاتك داخل البيئة لأغراض البحث. وإذا ظهر لك نموذج موافقة فاقرأه واتبع تعليمات معلمك.</span></li>
+        <li><svg class="ic"><use href="#i-spark"/></svg><span>حاول ولا تخشَ الخطأ، فأحمد يساعدك على التصحيح وإعادة المحاولة.</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== steps ===== -->
+<section id="steps" class="sec" aria-labelledby="steps-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-steps"/></svg> خطوات الاستخدام</span>
+    <h2 id="steps-title">سبع خطوات من الدخول إلى الإتمام</h2>
+    <p class="lead">الصور من البيئة نفسها. بدّل بين حالات الشاشة من الأزرار فوق الصورة، واضغط أي صورة لتكبيرها.</p>
+  </div>
+  <ol class="step-index" aria-label="الانتقال إلى خطوة">
+    <li><a href="#step-1"><b>1</b>الدخول</a></li>
+    <li><a href="#step-2"><b>2</b>الترحيب</a></li>
+    <li><a href="#step-3"><b>3</b>اختيار الجلسة</a></li>
+    <li><a href="#step-4"><b>4</b>فحص الصوت</a></li>
+    <li><a href="#step-5"><b>5</b>بطاقة الجلسة</a></li>
+    <li><a href="#step-6"><b>6</b>المحادثة</a></li>
+    <li><a href="#step-7"><b>7</b>الإتمام</a></li>
+  </ol>
+
+  <div class="steps">
+
+    <!-- step 1 -->
+    <article class="step glass" id="step-1" aria-labelledby="s1-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">01</span><h3 id="s1-t">ادخل برمزك البحثي</h3></div>
+        <ul class="ticks">
+          <li>افتح الرابط <span class="ui" dir="ltr">speakbetter.me</span> في المتصفح.</li>
+          <li>اكتب رمزك في خانة <span class="ui" dir="ltr">Student Code</span> كما استلمته من معلمك: الحروف والأرقام والشرطة، بلا مسافات.</li>
+          <li>اضغط <span class="ui blue" dir="ltr">Continue</span>. يصبح الزر أزرق داكنًا بعد كتابة الرمز.</li>
+        </ul>
+        <p class="note"><svg class="ic"><use href="#i-info"/></svg><span>لا تحتاج إلى بريد إلكتروني ولا كلمة مرور، فرمزك وحده يكفي.</span></p>
+      </div>
+      <figure class="shot" data-shot>
+        <div class="seg" role="tablist" aria-label="حالات شاشة الدخول">
+          <button type="button" role="tab" id="t1a" aria-controls="p1a" aria-selected="true">قبل كتابة الرمز</button>
+          <button type="button" role="tab" id="t1b" aria-controls="p1b" aria-selected="false" tabindex="-1">بعد كتابة الرمز</button>
+        </div>
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state" id="p1a" role="tabpanel" aria-labelledby="t1a" data-cap="قبل كتابة الرمز: زر Continue باهت وغير مفعّل.">
+              <button type="button" class="zoom" data-full="login-1.webp" aria-label="تكبير الصورة"><img src="login-1.webp" width="804" height="670" loading="lazy" alt="بطاقة الدخول: خانة Student Code فارغة وزر Continue باهت"></button>
+            </div>
+            <div class="state" id="p1b" role="tabpanel" aria-labelledby="t1b" data-cap="بعد كتابة الرمز: أصبح زر Continue أزرق، فاضغطه." hidden>
+              <button type="button" class="zoom" data-full="login-2.webp" aria-label="تكبير الصورة"><img src="login-2.webp" width="805" height="670" loading="lazy" alt="بطاقة الدخول بعد كتابة الرمز STU1-001 وزر Continue مفعّل"></button>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>قبل كتابة الرمز: زر Continue باهت وغير مفعّل.</span></figcaption>
+      </figure>
+    </article>
+
+    <!-- step 2 -->
+    <article class="step glass wide" id="step-2" aria-labelledby="s2-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">02</span><h3 id="s2-t">تأكد من رمزك في صفحة الترحيب</h3></div>
+        <ul class="ticks">
+          <li>تحقق من رمزك أعلى الصفحة <span class="nb">1</span>. إن لم يكن رمزك فأخبر معلمك قبل أي خطوة.</li>
+          <li>اضغط <span class="ui blue" dir="ltr">Start Speaking</span> <span class="nb">2</span> أو <span class="ui" dir="ltr">View Sessions</span> <span class="nb">3</span> للانتقال إلى قائمة الجلسات.</li>
+          <li>أحمد <span class="nb">4</span> شريكك في المحادثة، وتظهر فوقه عبارة <span class="en" dir="ltr">Ahmad is online</span> حين يكون جاهزًا.</li>
+        </ul>
+      </div>
+      <figure class="shot">
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me/welcome</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state">
+              <button type="button" class="zoom" data-full="welcome-1600.webp" aria-label="تكبير الصورة"><img src="welcome-960.webp" srcset="welcome-960.webp 960w, welcome-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 1100px" width="1600" height="784" loading="lazy" alt="صفحة الترحيب: رمز الطالب أعلى اليسار، وزرا Start Speaking وView Sessions، وأحمد واقفًا في مكتبة"></button>
+              <span class="pin" style="--x:10.1%;--y:5.6%">1</span>
+              <span class="pin" style="--x:4.6%;--y:84.2%">2</span>
+              <span class="pin" style="--x:15%;--y:84.2%">3</span>
+              <span class="pin" style="--x:73.6%;--y:68.7%">4</span>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>صفحة الترحيب: رمزك في الأعلى، وأزرار الانتقال في الأسفل.</span></figcaption>
+      </figure>
+    </article>
+
+    <!-- step 3 -->
+    <article class="step glass wide" id="step-3" aria-labelledby="s3-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">03</span><h3 id="s3-t">اختر جلستك</h3></div>
+        <ul class="ticks">
+          <li>تعرض الصفحة جلساتك الثماني في بطاقات، وفي أعلاها بطاقة تقدّمك <span class="nb">1</span> مثل <span class="en" dir="ltr">0 / 8</span>.</li>
+          <li>البطاقة المتاحة الآن تحمل <span class="ui blue-soft" dir="ltr">Current Session</span> <span class="nb">2</span>. تأكد أن عنوانها هو الجلسة التي حددها معلمك.</li>
+          <li>اضغط <span class="ui blue" dir="ltr">Start Session</span> <span class="nb">3</span> في هذه البطاقة.</li>
+          <li>البطاقات الباهتة <span class="ui gray" dir="ltr">Locked</span> <span class="nb">4</span> مقفلة حتى تكمل ما قبلها ويحين موعدها.</li>
+        </ul>
+      </div>
+      <figure class="shot" data-shot>
+        <div class="seg" role="tablist" aria-label="حالات قائمة الجلسات">
+          <button type="button" role="tab" id="t3a" aria-controls="p3a" aria-selected="true">قبل أول جلسة</button>
+          <button type="button" role="tab" id="t3b" aria-controls="p3b" aria-selected="false" tabindex="-1">بعد إتمام الجلسة الأولى</button>
+        </div>
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me/scenarios</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state" id="p3a" role="tabpanel" aria-labelledby="t3a" data-cap="بداية الرحلة: الجلسة الأولى متاحة والبقية مقفلة، والتقدم 0 من 8.">
+              <button type="button" class="zoom" data-full="sessions-1.webp" aria-label="تكبير الصورة"><img src="sessions-1.webp" width="1030" height="500" loading="lazy" alt="قائمة الجلسات: بطاقة الجلسة الأولى Introducing Yourself متاحة بزر Start Session، والبطاقات التالية مقفلة"></button>
+              <span class="pin" style="--x:77.7%;--y:11.6%">1</span>
+              <span class="pin" style="--x:8.9%;--y:84.8%">2</span>
+              <span class="pin" style="--x:22.5%;--y:87.6%">3</span>
+              <span class="pin" style="--x:33.5%;--y:92.2%">4</span>
+            </div>
+            <div class="state" id="p3b" role="tabpanel" aria-labelledby="t3b" data-cap="بعد إتمام الجلسة الأولى: بطاقتها Completed، والجلسة الثانية أصبحت Current Session." hidden>
+              <button type="button" class="zoom" data-full="sessions-2.webp" aria-label="تكبير الصورة"><img src="sessions-2.webp" width="1030" height="500" loading="lazy" alt="قائمة الجلسات بعد إتمام الأولى: بطاقتها خضراء Completed، والجلسة الثانية متاحة، والتقدم 1 من 8"></button>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>بداية الرحلة: الجلسة الأولى متاحة والبقية مقفلة، والتقدم 0 من 8.</span></figcaption>
+      </figure>
+    </article>
+
+    <!-- step 4 -->
+    <article class="step glass flip" id="step-4" aria-labelledby="s4-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">04</span><h3 id="s4-t">افحص الميكروفون والسماعات</h3></div>
+        <ul class="ticks">
+          <li>تأكد أن رمزك ظاهر في السطر الأول وبجانبه علامة صح خضراء.</li>
+          <li>اضغط <span class="ui" dir="ltr">Test</span> بجانب <span class="en" dir="ltr">Test Microphone</span>، واسمح للمتصفح باستخدام الميكروفون إذا طلب، ثم قل بصوت واضح:
+            <span class="quote-line"><span class="en" dir="ltr" lang="en">Hello. I am ready to practice English.</span><button type="button" class="say" data-say="Hello. I am ready to practice English." data-audio="ready.mp3"><svg class="ic"><use href="#i-speaker"/></svg>استمع</button></span></li>
+          <li>اضغط <span class="ui" dir="ltr">Test</span> بجانب <span class="en" dir="ltr">Test Speakers</span> واستمع إلى صوت أحمد، ثم اختر <span class="ui green" dir="ltr">Yes, I can hear</span>.</li>
+          <li>حين تظهر عبارة <span class="en" dir="ltr">Everything is ready!</span> اضغط <span class="ui blue" dir="ltr">Continue to Session</span>.</li>
+        </ul>
+        <p class="note"><svg class="ic"><use href="#i-info"/></svg><span>النسبة التي تظهر بجانب النص المسموع تعبّر عن ثقة النظام في التعرف على صوتك، وليست درجتك.</span></p>
+      </div>
+      <figure class="shot" data-shot>
+        <div class="seg" role="tablist" aria-label="حالات فحص الأجهزة">
+          <button type="button" role="tab" id="t4a" aria-controls="p4a" aria-selected="true">قبل الفحص</button>
+          <button type="button" role="tab" id="t4b" aria-controls="p4b" aria-selected="false" tabindex="-1">اختبار السماعات</button>
+          <button type="button" role="tab" id="t4c" aria-controls="p4c" aria-selected="false" tabindex="-1">كل شيء جاهز</button>
+        </div>
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me/check</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state" id="p4a" role="tabpanel" aria-labelledby="t4a" data-cap="قبل الفحص: زر Continue to Session غير مفعّل حتى تكتمل الفحوص.">
+              <button type="button" class="zoom" data-full="check-1.webp" aria-label="تكبير الصورة"><img src="check-1.webp" width="447" height="564" loading="lazy" alt="بطاقة System Check: رمز الطالب مؤكد، وزر Test للميكروفون، واختبار السماعات غير متاح بعد"></button>
+            </div>
+            <div class="state" id="p4b" role="tabpanel" aria-labelledby="t4b" data-cap="بعد نجاح الميكروفون: اختبر السماعات ثم اختر Yes, I can hear." hidden>
+              <button type="button" class="zoom" data-full="check-2.webp" aria-label="تكبير الصورة"><img src="check-2.webp" width="447" height="564" loading="lazy" alt="الميكروفون يعمل، واختبار السماعات يعرض زري Yes, I can hear وNo, I can't"></button>
+            </div>
+            <div class="state" id="p4c" role="tabpanel" aria-labelledby="t4c" data-cap="اكتملت الفحوص: ظهرت عبارة Everything is ready! وأصبح الزر مفعّلًا." hidden>
+              <button type="button" class="zoom" data-full="check-3.webp" aria-label="تكبير الصورة"><img src="check-3.webp" width="447" height="564" loading="lazy" alt="الفحوص مكتملة وعبارة Everything is ready! وزر Continue to Session مفعّل"></button>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>قبل الفحص: زر Continue to Session غير مفعّل حتى تكتمل الفحوص.</span></figcaption>
+      </figure>
+    </article>
+
+    <!-- step 5 -->
+    <article class="step glass" id="step-5" aria-labelledby="s5-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">05</span><h3 id="s5-t">اقرأ بطاقة الجلسة</h3></div>
+        <ul class="ticks">
+          <li>تعرض البطاقة الموقف الذي ستتحدث فيه، وأهداف التعلم <span class="en" dir="ltr">Learning Goals</span> التي ستعمل عليها.</li>
+          <li>انتظر حتى تنتهي رسالة <span class="en" dir="ltr">Getting your session ready…</span></li>
+          <li>اضغط <span class="ui blue" dir="ltr">Start Session</span> لتدخل الجلسة.</li>
+        </ul>
+        <p class="note"><svg class="ic"><use href="#i-info"/></svg><span>إذا ظهر لك نموذج موافقة فاقرأه واتبع تعليمات معلمك.</span></p>
+      </div>
+      <figure class="shot" data-shot>
+        <div class="seg" role="tablist" aria-label="حالات بطاقة الجلسة">
+          <button type="button" role="tab" id="t5a" aria-controls="p5a" aria-selected="true">تجهيز الجلسة</button>
+          <button type="button" role="tab" id="t5b" aria-controls="p5b" aria-selected="false" tabindex="-1">جاهزة للبدء</button>
+        </div>
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me/session</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state" id="p5a" role="tabpanel" aria-labelledby="t5a" data-cap="تجهيز الجلسة: انتظر قليلًا حتى تكتمل الرسالة.">
+              <button type="button" class="zoom" data-full="card-1.webp" aria-label="تكبير الصورة"><img src="card-1.webp" width="405" height="478" loading="lazy" alt="بطاقة الجلسة الأولى Introducing Yourself وأهدافها، ورسالة Getting your session ready"></button>
+            </div>
+            <div class="state" id="p5b" role="tabpanel" aria-labelledby="t5b" data-cap="الجلسة جاهزة: اضغط Start Session." hidden>
+              <button type="button" class="zoom" data-full="card-2.webp" aria-label="تكبير الصورة"><img src="card-2.webp" width="405" height="478" loading="lazy" alt="بطاقة الجلسة الأولى جاهزة وزر Start Session مفعّل"></button>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>تجهيز الجلسة: انتظر قليلًا حتى تكتمل الرسالة.</span></figcaption>
+      </figure>
+    </article>
+
+    <!-- step 6 -->
+    <article class="step glass wide" id="step-6" aria-labelledby="s6-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">06</span><h3 id="s6-t">تحدّث مع أحمد</h3></div>
+        <ul class="ticks">
+          <li>يرحب بك أحمد ويعرّفك بموضوع الجلسة.</li>
+          <li>تظهر بطاقات المفردات <span class="en" dir="ltr">Key Vocabulary</span> واحدة تلو الأخرى. اقرأ الكلمة ومثالها، واضغط <span class="en" dir="ltr">Tap to hear</span> لتسمع النطق ثم ردّده، وتنقّل بين البطاقات بزري <span class="ui" dir="ltr">Next</span> و<span class="ui" dir="ltr">Prev</span>.</li>
+          <li>حين تنتهي من المفردات اضغط <span class="ui blue">ابدأ المحادثة</span> أسفل الشاشة.</li>
+          <li>في المحادثة استمع حتى ينتهي أحمد، ثم اضغط زر الميكروفون وتحدث، واضغطه مرة أخرى للإرسال.</li>
+        </ul>
+        <a class="more" href="#session">تعرّف على شاشة الجلسة بالتفصيل <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="shot" data-shot>
+        <div class="seg" role="tablist" aria-label="مراحل من داخل الجلسة">
+          <button type="button" role="tab" id="t6a" aria-controls="p6a" aria-selected="true">الترحيب</button>
+          <button type="button" role="tab" id="t6b" aria-controls="p6b" aria-selected="false" tabindex="-1">المفردات</button>
+          <button type="button" role="tab" id="t6c" aria-controls="p6c" aria-selected="false" tabindex="-1">أحمد يستمع إليك</button>
+          <button type="button" role="tab" id="t6d" aria-controls="p6d" aria-selected="false" tabindex="-1">أحمد يفكر</button>
+        </div>
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me/session</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state" id="p6a" role="tabpanel" aria-labelledby="t6a" data-cap="الترحيب: يقدّم أحمد موضوع الجلسة ثم يعرض بعض المفردات المفيدة.">
+              <button type="button" class="zoom" data-full="s-intro-1600.webp" aria-label="تكبير الصورة"><img src="s-intro-960.webp" srcset="s-intro-960.webp 960w, s-intro-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 1100px" width="1600" height="803" loading="lazy" alt="مرحلة Introduction: أحمد يرحب بالطالب في مقهى The Golden Bean Café"></button>
+            </div>
+            <div class="state" id="p6b" role="tabpanel" aria-labelledby="t6b" data-cap="المفردات: بطاقة الكلمة ومثالها، وزر الانتقال إلى المحادثة في الأسفل." hidden>
+              <button type="button" class="zoom" data-full="s-vocab-1898.webp" aria-label="تكبير الصورة"><img src="s-vocab-960.webp" srcset="s-vocab-960.webp 960w, s-vocab-1898.webp 1898w" sizes="(max-width: 900px) 92vw, 1100px" width="1898" height="956" loading="lazy" alt="مرحلة Vocabulary: بطاقة الكلمة School ومثالها، وزر ابدأ المحادثة في أسفل الشاشة"></button>
+            </div>
+            <div class="state" id="p6c" role="tabpanel" aria-labelledby="t6c" data-cap="دورك في الكلام: الزر الأخضر يعني أن أحمد يستمع إليك، فاضغطه للإرسال." hidden>
+              <button type="button" class="zoom" data-full="s-listen-1600.webp" aria-label="تكبير الصورة"><img src="s-listen-960.webp" srcset="s-listen-960.webp 960w, s-listen-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 1100px" width="1600" height="803" loading="lazy" alt="مرحلة Guided Conversation: أحمد يسأل الطالب عن اسمه، وزر الميكروفون أخضر يعرض Listening"></button>
+            </div>
+            <div class="state" id="p6d" role="tabpanel" aria-labelledby="t6d" data-cap="أحمد يفكر: انتظر رده ولا تكرر الإرسال." hidden>
+              <button type="button" class="zoom" data-full="s-think-1600.webp" aria-label="تكبير الصورة"><img src="s-think-960.webp" srcset="s-think-960.webp 960w, s-think-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 1100px" width="1600" height="806" loading="lazy" alt="أحمد يعيد الطالب إلى مهمة الجلسة، وأسفل الشاشة عبارة Ahmad is thinking"></button>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>الترحيب: يقدّم أحمد موضوع الجلسة ثم يعرض بعض المفردات المفيدة.</span></figcaption>
+      </figure>
+    </article>
+
+    <!-- step 7 -->
+    <article class="step glass flip" id="step-7" aria-labelledby="s7-t">
+      <div class="step-text">
+        <div class="step-head"><span class="step-num">07</span><h3 id="s7-t">أكمل الجلسة وتحقق من الإتمام</h3></div>
+        <ul class="ticks">
+          <li>تابع التغذية الراجعة والخلاصة حتى تظهر صفحة الإتمام وعليها عبارة <span class="en" dir="ltr">Great job!</span></li>
+          <li>تعرض صفحة الإتمام مدة جلستك وعدد أدوار المحادثة التي أجريتها مع أحمد.</li>
+          <li>اضغط <span class="ui green" dir="ltr">Back to Scenarios</span>، وتأكد أن بطاقة الجلسة صارت <span class="ui green-soft" dir="ltr">Completed</span>.</li>
+          <li>على جهاز مشترك؟ اضغط <span class="ui" dir="ltr">Log out</span> بعد أن تتأكد من الإتمام.</li>
+        </ul>
+      </div>
+      <figure class="shot" data-shot>
+        <div class="seg" role="tablist" aria-label="حالات الإتمام">
+          <button type="button" role="tab" id="t7a" aria-controls="p7a" aria-selected="true">صفحة الإتمام</button>
+          <button type="button" role="tab" id="t7b" aria-controls="p7b" aria-selected="false" tabindex="-1">بطاقة مكتملة</button>
+        </div>
+        <div class="frame">
+          <div class="frame-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>speakbetter.me/complete</span></div>
+          <div class="stage" dir="ltr">
+            <div class="state" id="p7a" role="tabpanel" aria-labelledby="t7a" data-cap="صفحة الإتمام: مدة الجلسة وعدد أدوار المحادثة، وزر العودة إلى الجلسات.">
+              <button type="button" class="zoom" data-full="complete.webp" aria-label="تكبير الصورة"><img src="complete.webp" width="440" height="514" loading="lazy" alt="صفحة الإتمام: Great job! You completed the session، المدة 2:33، وعدد الأدوار 2، وزر Back to Scenarios"></button>
+            </div>
+            <div class="state" id="p7b" role="tabpanel" aria-labelledby="t7b" data-cap="في قائمة الجلسات: بطاقة الجلسة المنجزة تحمل Completed." hidden>
+              <button type="button" class="zoom" data-full="sessions-2.webp" aria-label="تكبير الصورة"><img src="sessions-2.webp" width="1030" height="500" loading="lazy" alt="قائمة الجلسات بعد الإتمام: الجلسة الأولى Completed والثانية متاحة"></button>
+            </div>
+                      </div>
+        </div>
+        <figcaption class="shot-cap"><span>صفحة الإتمام: مدة الجلسة وعدد أدوار المحادثة، وزر العودة إلى الجلسات.</span></figcaption>
+      </figure>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== session ===== -->
+<section id="session" class="sec" aria-labelledby="session-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-clock"/></svg> داخل الجلسة</span>
+    <h2 id="session-title">أربعون دقيقة في خمس مراحل</h2>
+    <p class="lead">لكل جلسة موقف من الحياة اليومية ومشهد خاص بها، مثل مقهى الجلسة الأولى. يعرض أعلى الشاشة المرحلة الحالية والوقت المتبقي، فاتبع التعليمات الظاهرة ولا تستعجل الانتقال.</p>
+  </div>
+
+  <div class="panel glass">
+    <div class="tl-top">
+      <h3>توزيع وقت الجلسة</h3>
+      <span class="tl-total"><b>40</b> دقيقة</span>
+    </div>
+    <div class="tl-bar" role="img" aria-label="التهيئة 5 دقائق، المدخل اللغوي 5 دقائق، المحادثة الموجهة 20 دقيقة، التغذية الراجعة 7 دقائق، الخلاصة والتأمل 3 دقائق">
+      <span class="tl-seg" data-stage="1" style="--m:5;--a:.22">5<small>د</small></span>
+      <span class="tl-seg" data-stage="2" style="--m:5;--a:.38">5<small>د</small></span>
+      <span class="tl-seg main" data-stage="3" style="--m:20">20<small>دقيقة</small></span>
+      <span class="tl-seg" data-stage="4" style="--m:7;--a:.5">7<small>د</small></span>
+      <span class="tl-seg" data-stage="5" style="--m:3;--a:.3">3</span>
+    </div>
+    <div class="tl-ticks" aria-hidden="true">
+      <span style="--p:0%">0</span><span style="--p:12.5%">5</span><span style="--p:25%">10</span><span style="--p:75%">30</span><span class="t-minor" style="--p:92.5%">37</span><span style="--p:100%">40</span>
+    </div>
+    <ol class="stages">
+      <li class="stage-card" data-stage="1" tabindex="0"><span class="sw" style="--a:.22"></span><h4>التهيئة<span class="en">Introduction</span></h4><span class="min">5 دقائق</span><p>يرحب بك أحمد ويعرض موضوع الجلسة وأهدافها.</p></li>
+      <li class="stage-card" data-stage="2" tabindex="0"><span class="sw" style="--a:.38"></span><h4>المدخل اللغوي<span class="en">Vocabulary</span></h4><span class="min">5 دقائق</span><p>تقرأ المفردات وأمثلتها، وتستمع إلى نطقها وتردّدها.</p></li>
+      <li class="stage-card" data-stage="3" tabindex="0"><span class="sw main"></span><h4>المحادثة الموجهة<span class="en">Guided Conversation</span></h4><span class="min">20 دقيقة</span><p>قلب الجلسة. تتحاور بالإنجليزية مع أحمد حول الموقف.</p></li>
+      <li class="stage-card" data-stage="4" tabindex="0"><span class="sw" style="--a:.5"></span><h4>التغذية الراجعة<span class="en">Feedback</span></h4><span class="min">7 دقائق</span><p>يراجع معك أحمد نقاط قوتك وما يحتاج إلى تحسين، مع نصائح.</p></li>
+      <li class="stage-card" data-stage="5" tabindex="0"><span class="sw" style="--a:.3"></span><h4>الخلاصة والتأمل<span class="en">Closing</span></h4><span class="min">3 دقائق</span><p>تراجع ما تعلمته وتتابع الخلاصة حتى صفحة الإتمام.</p></li>
+    </ol>
+  </div>
+
+  <div class="block panel glass">
+    <div class="sub-head">
+      <h3 class="sub">خريطة شاشة الجلسة</h3>
+      <p>اضغط رقمًا على الصورة أو في القائمة لتكبير الجزء الذي يشير إليه.</p>
+    </div>
+    <div class="map" dir="ltr">
+      <div class="map-view">
+        <div class="map-inner">
+          <img src="s-vocab-1898.webp" width="1898" height="956" loading="lazy" alt="شاشة الجلسة في مرحلة المفردات مع أرقام تشير إلى أجزائها">
+          <button type="button" class="hot" style="--x:4.7%;--y:4.6%" data-zoom=".06,.04,3" aria-label="1: إنهاء الجلسة والمؤقت">1</button>
+          <button type="button" class="hot" style="--x:55.3%;--y:3.6%" data-zoom=".5,.03,3" aria-label="2: شريط المرحلة">2</button>
+          <button type="button" class="hot" style="--x:11.2%;--y:28.8%" data-zoom=".06,.17,2.4" aria-label="3: موقف اليوم">3</button>
+          <button type="button" class="hot" style="--x:58.5%;--y:62.8%" data-zoom=".5,.72,1.8" aria-label="4: أحمد">4</button>
+          <button type="button" class="hot" style="--x:87.7%;--y:7.3%" data-zoom=".935,.12,2.6" aria-label="5: رسالة أحمد">5</button>
+          <button type="button" class="hot" style="--x:87.7%;--y:26.7%" data-zoom=".935,.28,2.6" aria-label="6: بطاقة المفردات">6</button>
+          <button type="button" class="hot" style="--x:87.2%;--y:92%" data-zoom=".935,.93,2.6" aria-label="7: زر ابدأ المحادثة">7</button>
+          <button type="button" class="hot" style="--x:53.2%;--y:94.2%" data-zoom=".5,.96,3" aria-label="8: زر الميكروفون">8</button>
+        </div>
+      </div>
+    </div>
+    <div class="map-tools">
+      <p>الصورة من مرحلة المفردات في الجلسة الأولى.</p>
+      <button type="button" class="btn btn-ghost btn-sm map-reset" hidden><svg class="ic"><use href="#i-zoom"/></svg>الشاشة كاملة</button>
+    </div>
+    <ol class="map-legend">
+      <li><button type="button"><span class="nb">1</span><span><b>إنهاء الجلسة والمؤقت</b><span class="d">بجانب زر <span class="en" dir="ltr">End Session</span> مؤقت يعدّ الوقت المتبقي. لا تضغط الزر قبل أن يُنهي أحمد الخلاصة إلا بتوجيه من معلمك.</span></span></button></li>
+      <li><button type="button"><span class="nb">2</span><span><b>شريط المرحلة</b><span class="d">اسم المرحلة الحالية ورمزك، وتحتهما نقاط المراحل الخمس: الأخضر مكتمل والأزرق الحالي.</span></span></button></li>
+      <li><button type="button"><span class="nb">3</span><span><b>موقف اليوم <span class="en" dir="ltr">Today's Scenario</span></b><span class="d">وصف الموقف الذي تتحدث فيه وأهداف التعلم.</span></span></button></li>
+      <li><button type="button"><span class="nb">4</span><span><b>أحمد</b><span class="d">شريكك في المحادثة، يتحدث بصوت مسموع وتتحرك شفتاه مع الكلام.</span></span></button></li>
+      <li><button type="button"><span class="nb">5</span><span><b>رسالة أحمد</b><span class="d">نص ما يقوله أحمد، اقرأه وأنت تستمع.</span></span></button></li>
+      <li><button type="button"><span class="nb">6</span><span><b>بطاقة المفردات</b><span class="d">الكلمة ومثالها، وزر <span class="en" dir="ltr">Tap to hear</span> للنطق، والتنقل بزري <span class="en" dir="ltr">Prev</span> و<span class="en" dir="ltr">Next</span>.</span></span></button></li>
+      <li><button type="button"><span class="nb">7</span><span><b>ابدأ المحادثة</b><span class="d">ينقلك من المفردات إلى المحادثة الموجهة.</span></span></button></li>
+      <li><button type="button"><span class="nb">8</span><span><b>زر الميكروفون</b><span class="d">اضغطه لتتحدث، ثم اضغطه مرة أخرى للإرسال.</span></span></button></li>
+    </ol>
+  </div>
+
+  <div class="block">
+    <div class="sub-head"><h3 class="sub">زر الميكروفون في ثلاث حالات</h3></div>
+    <div class="mics">
+      <div class="mic-card glass">
+        <div class="mic-row" aria-hidden="true"><span class="mic-btn m-idle"><svg class="ic"><use href="#i-mic"/></svg></span></div>
+        <h4>جاهز لدورك</h4>
+        <p>اضغطه حين ينتهي أحمد من كلامه لتبدأ الحديث.</p>
+      </div>
+      <div class="mic-card glass">
+        <div class="mic-row" aria-hidden="true">
+          <span class="mini-wave"><span style="--h:.4;--d:-.2s"></span><span style="--h:.8;--d:-.6s"></span><span style="--h:.55;--d:-.4s"></span><span style="--h:.9;--d:-.1s"></span></span>
+          <span class="mic-btn m-live"><i></i></span>
+          <span class="mini-wave"><span style="--h:.9;--d:-.3s"></span><span style="--h:.5;--d:-.7s"></span><span style="--h:.75;--d:-.2s"></span><span style="--h:.4;--d:-.5s"></span></span>
+        </div>
+        <h4>أحمد يستمع إليك</h4>
+        <p>تظهر تحته عبارة <span class="en" dir="ltr">Listening… (Tap to send)</span>. تحدث بوضوح، ثم اضغط الزر الأخضر لإرسال كلامك.</p>
+      </div>
+      <div class="mic-card glass">
+        <div class="mic-row" aria-hidden="true"><span class="mic-btn m-think"><img src="ahmad-face.webp" width="168" height="168" alt=""></span><span class="dots3"><span style="--d:0s"></span><span style="--d:.15s"></span><span style="--d:.3s"></span></span></div>
+        <h4>أحمد يفكر</h4>
+        <p>تظهر عبارة <span class="en" dir="ltr">Ahmad is thinking…</span> فانتظر رده، ولا تضغط الزر مرة أخرى.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== talk ===== -->
+<section id="talk" class="sec" aria-labelledby="talk-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-mic"/></svg> المحادثة</span>
+    <h2 id="talk-title">دورك في الحوار مع أحمد</h2>
+    <p class="lead">المحادثة تبادل أدوار؛ يتكلم أحمد ثم تتكلم أنت. كرر هذه الدورة مع كل سؤال.</p>
+  </div>
+  <ol class="cycle">
+    <li class="glass"><span class="nb">1</span><h4>استمع</h4><p>انتظر حتى ينهي أحمد سؤاله أو توجيهه.</p></li>
+    <li class="glass"><span class="nb">2</span><h4>ابدأ دورك</h4><p>اضغط زر الميكروفون حين يكون جاهزًا.</p></li>
+    <li class="glass"><span class="nb">3</span><h4>تحدّث</h4><p>أجب بالإنجليزية بصوت واضح وبكلماتك أنت، وأضف تفاصيل إذا طلب أحمد.</p></li>
+    <li class="glass"><span class="nb">4</span><h4>أرسل</h4><p>توقف لحظة بعد كلامك، ثم اضغط الزر للإرسال.</p></li>
+    <li class="glass"><span class="nb">5</span><h4>تابع الرد</h4><p>استمع إلى رد أحمد أو تصحيحه، ثم أجب من جديد.</p></li>
+  </ol>
+
+  <div class="block">
+    <div class="sub-head">
+      <h3 class="sub">عبارات تساعدك حين لا تفهم</h3>
+      <p>قلها بالإنجليزية لأحمد. اضغط «استمع» لتسمع نطقها.</p>
+    </div>
+    <div class="phrases">
+      <div class="phrase glass"><p class="p-en" lang="en">Could you repeat that, please?</p><p class="p-ar">هل تعيد ذلك من فضلك؟</p><button type="button" class="say" data-say="Could you repeat that, please?" data-audio="repeat.mp3"><svg class="ic"><use href="#i-speaker"/></svg>استمع</button></div>
+      <div class="phrase glass"><p class="p-en" lang="en">Could you speak more slowly, please?</p><p class="p-ar">هل تتحدث ببطء أكثر من فضلك؟</p><button type="button" class="say" data-say="Could you speak more slowly, please?" data-audio="slowly.mp3"><svg class="ic"><use href="#i-speaker"/></svg>استمع</button></div>
+      <div class="phrase glass"><p class="p-en" lang="en">What does this word mean?</p><p class="p-ar">ما معنى هذه الكلمة؟</p><button type="button" class="say" data-say="What does this word mean?" data-audio="meaning.mp3"><svg class="ic"><use href="#i-speaker"/></svg>استمع</button></div>
+      <div class="phrase glass"><p class="p-en" lang="en">Let me try again.</p><p class="p-ar">دعني أحاول مرة أخرى.</p><button type="button" class="say" data-say="Let me try again." data-audio="again.mp3"><svg class="ic"><use href="#i-speaker"/></svg>استمع</button></div>
+    </div>
+  </div>
+
+  <div class="block fb glass">
+    <div class="sub-head"><h3 class="sub">كيف يساعدك أحمد على التصحيح؟</h3></div>
+    <div class="tabs" role="tablist" aria-label="أنواع التصحيح" data-tabs>
+      <button type="button" role="tab" id="fb-t1" aria-controls="fb-p1" aria-selected="true"><span class="lvl">1</span>يعيد الصياغة</button>
+      <button type="button" role="tab" id="fb-t2" aria-controls="fb-p2" aria-selected="false" tabindex="-1"><span class="lvl">2</span>يطلب المحاولة</button>
+      <button type="button" role="tab" id="fb-t3" aria-controls="fb-p3" aria-selected="false" tabindex="-1"><span class="lvl">3</span>يصحح ويشرح</button>
+    </div>
+
+    <div class="fb-body" id="fb-p1" role="tabpanel" aria-labelledby="fb-t1">
+      <div class="chat">
+        <div class="msg me"><span class="av" aria-hidden="true">أنت</span><p class="bubble" lang="en"><span class="who">أنت</span>I <span class="err">goed</span> to the store yesterday.</p></div>
+        <div class="msg ahmad"><p class="bubble" lang="en"><span class="who">أحمد</span>Oh, you <span class="fix">went</span> to the store! What did you buy?</p><span class="av"><img src="ahmad-face.webp" width="168" height="168" alt="أحمد"></span></div>
+      </div>
+      <div class="fb-explain">
+        <h4>إعادة الصياغة</h4>
+        <p>يكرر أحمد جملتك بالصيغة الصحيحة داخل رده دون أن يقاطعك. لاحظ الكلمة الصحيحة واستخدمها في جملتك التالية.</p>
+      </div>
+    </div>
+
+    <div class="fb-body" id="fb-p2" role="tabpanel" aria-labelledby="fb-t2" hidden>
+      <div class="chat">
+        <div class="msg me"><span class="av" aria-hidden="true">أنت</span><p class="bubble" lang="en"><span class="who">أنت</span>I am <span class="err">go</span> school every day.</p></div>
+        <div class="msg ahmad"><p class="bubble" lang="en"><span class="who">أحمد</span>Hmm, could you say that again? Think about which form of 'go' to use…</p><span class="av"><img src="ahmad-face.webp" width="168" height="168" alt="أحمد"></span></div>
+        <div class="msg me"><span class="av" aria-hidden="true">أنت</span><p class="bubble" lang="en"><span class="who">محاولتك الثانية</span>I <span class="fix">go</span> to school every day.</p></div>
+      </div>
+      <div class="fb-explain">
+        <h4>طلب المحاولة مع تلميح</h4>
+        <p>يطلب منك أحمد أن تحاول مرة أخرى ويعطيك تلميحًا. اقرأ التلميح إن ظهر في بطاقة، وفكّر في جملتك، ثم أعد المحاولة.</p>
+      </div>
+    </div>
+
+    <div class="fb-body" id="fb-p3" role="tabpanel" aria-labelledby="fb-t3" hidden>
+      <div class="chat">
+        <div class="msg me"><span class="av" aria-hidden="true">أنت</span><p class="bubble" lang="en"><span class="who">أنت</span>She <span class="err">don't</span> like it.</p></div>
+        <div class="msg ahmad"><div class="bubble" lang="en"><span class="who">أحمد</span>
+          <div class="correct">
+            <span class="c-line"><svg class="ic"><use href="#i-check"/></svg>She doesn't like it.</span>
+            <small>With he / she / it, we use "doesn't", not "don't".</small>
+            <button type="button" class="say" data-say="She doesn't like it." data-audio="doesnt.mp3"><svg class="ic"><use href="#i-speaker"/></svg>استمع</button>
+          </div></div><span class="av"><img src="ahmad-face.webp" width="168" height="168" alt="أحمد"></span></div>
+      </div>
+      <div class="fb-explain">
+        <h4>التصحيح مع الشرح</h4>
+        <p>إذا تكرر الخطأ يعرض أحمد الصيغة الصحيحة مع شرح القاعدة وزر للاستماع. اقرأ التصحيح، واستمع إلى النطق، ثم أعد الجملة بصوتك.</p>
+      </div>
+    </div>
+
+    <p class="fb-foot"><svg class="ic"><use href="#i-spark"/></svg>الخطأ جزء من التعلم، وكل محاولة تقرّبك من الجملة الصحيحة.</p>
+  </div>
+</section>
+
+<!-- ===== sessions ===== -->
+<section id="sessions" class="sec" aria-labelledby="sessions-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-grid"/></svg> الجلسات</span>
+    <h2 id="sessions-title">ثمانية مواقف من الحياة اليومية</h2>
+    <p class="lead">تتدرج الجلسات من التعريف بنفسك إلى سرد أحداث مضت. تُفتح كل جلسة بعد إتمام التي قبلها وحلول موعدها في جدول معلمك، لذلك قد تبقى الجلسة التالية مقفلة بعض الوقت.</p>
+  </div>
+  <ul class="legend" aria-label="حالات بطاقات الجلسات">
+    <li><span class="ui blue-soft" dir="ltr">Current Session</span> متاحة الآن</li>
+    <li><span class="ui green-soft" dir="ltr">Completed</span> أنجزتها</li>
+    <li><span class="ui gray" dir="ltr">Locked</span> مقفلة حتى يحين دورها</li>
+  </ul>
+  <ol class="scen">
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">01</span><span class="sc-ico"><svg class="ic"><use href="#i-user"/></svg></span></div><h4>التعريف بالنفس والتعارف</h4><p class="sc-en">Introducing Yourself</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">02</span><span class="sc-ico"><svg class="ic"><use href="#i-cal"/></svg></span></div><h4>وصف الروتين اليومي والتغيرات</h4><p class="sc-en">Daily Routines and Changes</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">03</span><span class="sc-ico"><svg class="ic"><use href="#i-spark"/></svg></span></div><h4>التحدث عن الهوايات والاهتمامات</h4><p class="sc-en">Hobbies, Interests and Qualities</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">04</span><span class="sc-ico"><svg class="ic"><use href="#i-chatq"/></svg></span></div><h4>طلب المعلومات وتقديمها</h4><p class="sc-en">Asking for and Giving Information</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">05</span><span class="sc-ico"><svg class="ic"><use href="#i-pin"/></svg></span></div><h4>وصف الأشخاص والأماكن</h4><p class="sc-en">Describing People and Places</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">06</span><span class="sc-ico"><svg class="ic"><use href="#i-heart"/></svg></span></div><h4>التعبير عن الآراء والتفضيلات</h4><p class="sc-en">Opinions and Preferences</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">07</span><span class="sc-ico"><svg class="ic"><use href="#i-bulb"/></svg></span></div><h4>تقديم النصائح والمقترحات والتفاوض</h4><p class="sc-en">Advice and Negotiation</p></li>
+    <li class="sc glass"><div class="sc-top"><span class="sc-num">08</span><span class="sc-ico"><svg class="ic"><use href="#i-hist"/></svg></span></div><h4>سرد أحداث وتجارب ماضية</h4><p class="sc-en">Narrating a Past Event</p></li>
+  </ol>
+</section>
+
+<!-- ===== help ===== -->
+<section id="help" class="sec" aria-labelledby="help-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-help"/></svg> حل المشكلات</span>
+    <h2 id="help-title">إذا واجهتك مشكلة</h2>
+    <p class="lead">جرّب الحل المقترح أولًا. وإذا استمرت المشكلة فارفع يدك، وأخبر معلمك بالرسالة الظاهرة والمرحلة التي كنت فيها.</p>
+  </div>
+  <div class="faq">
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-id"/></svg></span>لا أستطيع الدخول برمزي<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> راجع رمزك حرفًا حرفًا، الحروف والأرقام والشرطة، وامسح أي مسافة قبل الرمز أو بعده.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> كان الرمز صحيحًا واستمر الرفض.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-lock"/></svg></span>الجلسة المطلوبة مقفلة<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> تأكد أنك أكملت الجلسة السابقة، وأن موعد هذه الجلسة قد حان في جدول معلمك.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> تحقق الشرطان وبقيت الجلسة مقفلة.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-mic"/></svg></span>الميكروفون لا يستجيب<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> تأكد من توصيل السماعة وأن الميكروفون غير مكتوم. ثم افتح إعدادات الموقع من شريط العنوان أو من إعدادات المتصفح، واسمح لموقع البيئة باستخدام الميكروفون، واختر الميكروفون الصحيح.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> استمر العطل، أو لم تستطع تغيير الإذن على جهاز المدرسة.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-speaker"/></svg></span>لا أسمع صوت أحمد<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> تحقق من توصيل السماعات ورفع الصوت وإلغاء الكتم، وأعد اختبار السماعات قبل الجلسة.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> نجح الاختبار وتعطل الصوت داخل الجلسة.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-chatq"/></svg></span>النص الظاهر لا يطابق كلامي<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> انتقل إلى مكان أهدأ، وقرّب الميكروفون من فمك، وتحدث بوضوح ثم أعد المحاولة.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> تكرر الاختلاف وأثّر في المحادثة.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-clock"/></svg></span>تأخر رد أحمد أو انقطع<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> انتظر قليلًا حتى يظهر الرد، ولا تكرر الإرسال بسرعة، وتحقق من اتصالك بالإنترنت.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> استمر الانقطاع أو لم تستطع إكمال دورك.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-browser"/></svg></span>رسالة أن جلستي مفتوحة على جهاز آخر<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> ترتبط الجلسة بالجهاز الذي بدأتها عليه، فلا تدخل برمزك من جهازين في الوقت نفسه.</p>
+        <p class="q-tell"><b>أخبر معلمك</b> قبل أن تنتقل إلى جهاز آخر أو تحاول استعادة الجلسة.</p>
+      </div>
+    </details>
+    <details class="q glass">
+      <summary><span class="q-ico"><svg class="ic"><use href="#i-check"/></svg></span>لم تظهر علامة الإتمام<svg class="ic chev"><use href="#i-chev"/></svg></summary>
+      <div class="q-body">
+        <p class="q-try"><b>جرّب:</b> راجع صفحة الإتمام وحالة بطاقة الجلسة في القائمة، ولا تُعد الجلسة من تلقاء نفسك.</p>
+        <p class="q-tell"><b>أخبر معلمك إذا</b> غابت علامة <span class="en" dir="ltr">Completed</span> أو ظهرت حالة مختلفة.</p>
+      </div>
+    </details>
+  </div>
+  <div class="callout glass">
+    <span class="callout-ico"><svg class="ic"><use href="#i-help"/></svg></span>
+    <div>
+      <h3>اطلب مساعدة معلمك عندما</h3>
+      <ul>
+        <li>يتعذر الدخول، أو تبقى الجلسة المطلوبة مقفلة.</li>
+        <li>لا يعمل الصوت، أو يتكرر ظهور نص مختلف عن كلامك.</li>
+        <li>تنقطع الجلسة، أو لا تظهر علامة الإتمام.</li>
+      </ul>
+      <p>أخبره بالرسالة الظاهرة على شاشتك، والمرحلة التي كنت فيها.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== teacher ===== -->
+<section id="teacher" class="sec" aria-labelledby="teacher-title">
+  <div class="sec-head">
+    <span class="eyebrow"><svg class="ic"><use href="#i-board"/></svg> للمعلم</span>
+    <h2 id="teacher-title">عرضك الأول أمام الطلاب</h2>
+    <p class="lead">تسلسل مقترح في نحو عشر دقائق قبل العمل الفردي، يتبعه نص افتتاحي وأسئلة تتأكد بها من فهم الطلاب.</p>
+  </div>
+
+  <div class="panel glass">
+    <div class="tl-top">
+      <h3>خطة العرض</h3>
+      <span class="tl-total"><b>10</b> دقائق</span>
+    </div>
+    <div class="tl-bar" role="img" aria-label="دقيقة للغرض، دقيقتان للدخول، دقيقتان للفحص، ثلاث دقائق للمحادثة، دقيقتان للإتمام">
+      <span class="tl-seg" style="--m:1;--a:.22">1</span>
+      <span class="tl-seg" style="--m:2;--a:.36">2–3</span>
+      <span class="tl-seg" style="--m:2;--a:.5">4–5</span>
+      <span class="tl-seg main" style="--m:3">6–8</span>
+      <span class="tl-seg" style="--m:2;--a:.36">9–10</span>
+    </div>
+    <div class="tl-ticks" aria-hidden="true">
+      <span style="--p:0%">0</span><span style="--p:10%">1</span><span style="--p:30%">3</span><span style="--p:50%">5</span><span style="--p:80%">8</span><span style="--p:100%">10</span>
+    </div>
+    <div class="plan-rows">
+      <div class="pr head"><span>الزمن</span><span>يعرض المعلم</span><span>ينفذ الطالب</span></div>
+      <div class="pr"><span class="t">الدقيقة 1</span><span class="c"><em>يعرض المعلم</em>الغرض من البيئة، وأهمية المحاولة أثناء التعلم.</span><span class="c"><em>ينفذ الطالب</em>يعرف أنه سيتحدث مع أحمد بالإنجليزية.</span></div>
+      <div class="pr"><span class="t">الدقيقتان 2–3</span><span class="c"><em>يعرض المعلم</em>الدخول ومراجعة الرمز، ثم قائمة الجلسات.</span><span class="c"><em>ينفذ الطالب</em>يدخل برمزه ويحدد الجلسة المطلوبة.</span></div>
+      <div class="pr"><span class="t">الدقيقتان 4–5</span><span class="c"><em>يعرض المعلم</em>فحص الميكروفون والسماعات.</span><span class="c"><em>ينفذ الطالب</em>يجرّب الصوت ويتأكد من نجاح الفحص.</span></div>
+      <div class="pr"><span class="t">الدقائق 6–8</span><span class="c"><em>يعرض المعلم</em>دور محادثة، ومثال لتلقي التصحيح.</span><span class="c"><em>ينفذ الطالب</em>يوضح طريقة الرد وطلب الإعادة.</span></div>
+      <div class="pr"><span class="t">الدقيقتان 9–10</span><span class="c"><em>يعرض المعلم</em>الإتمام، ومتى يطلب الطالب المساعدة.</span><span class="c"><em>ينفذ الطالب</em>يذكر كيف يتحقق من الإتمام، ومتى يخبر المعلم.</span></div>
+    </div>
+  </div>
+
+  <div class="t-grid">
+    <div class="panel glass script">
+      <p class="card-title"><svg class="ic"><use href="#i-board"/></svg>نص افتتاحي مقترح</p>
+      <blockquote id="opening">سنتدرب في هذه البيئة على التحدث بالإنجليزية مع أحمد. ادخل برمزك الخاص، واستمع إلى التعليمات، ثم أجب بصوتك. حاول حتى لو أخطأت، واستفد من التلميح أو التصحيح. وإذا واجهتك مشكلة في الصوت أو الدخول فأخبرني حتى نحلها.</blockquote>
+      <button type="button" class="btn btn-ghost btn-sm" data-copy="opening"><svg class="ic"><use href="#i-copy"/></svg><span>انسخ النص</span></button>
+    </div>
+    <div class="panel glass">
+      <p class="card-title"><svg class="ic"><use href="#i-target"/></svg>أسئلة تتأكد بها من الفهم</p>
+      <ol class="qs">
+        <li>أين تجد رمزك بعد الدخول؟</li>
+        <li>كيف تعرف الجلسة المتاحة الآن؟</li>
+        <li>كيف تتأكد أن الميكروفون والسماعات يعملان؟</li>
+        <li>ماذا تفعل إذا لم تفهم سؤال أحمد، أو طلب منك المحاولة مرة أخرى؟</li>
+        <li>كيف تعرف أنك أنهيت الجلسة؟</li>
+      </ol>
+      <p class="decision">ابدأ العمل الفردي حين يستطيع الطالب شرح الخطوات الأساسية وتنفيذ الفحص بنفسه. وإذا ظهرت مشكلة عامة في الأجهزة أو الشبكة فنسّق مع الباحث لتنظيم البدء.</p>
+    </div>
+  </div>
+
+  <div class="tri">
+    <div class="tcard glass">
+      <p class="card-title"><svg class="ic"><use href="#i-check"/></svg>قبل الحصة</p>
+      <ul>
+        <li>تأكد من قائمة طلاب المجموعة التجريبية، ورمز كل طالب، وموعد إتاحة الجلسة المطلوبة.</li>
+        <li>افتح البيئة على أجهزة المدرسة، وجرّبها في المتصفح والشبكة اللذين سيستخدمهما الطلاب، ونفّذ فحص الأجهزة.</li>
+        <li>جهّز سماعة رأس بميكروفون لكل طالب متى أمكن، ومكانًا يقل فيه تداخل الأصوات.</li>
+        <li>اطلب من الباحث رمزًا مخصصًا للعرض إن احتجت إلى نموذج أمام الفصل، ولا تستخدم رمز طالب.</li>
+      </ul>
+    </div>
+    <div class="tcard glass">
+      <p class="card-title"><svg class="ic"><use href="#i-headset"/></svg>أثناء العمل الفردي</p>
+      <ul>
+        <li>تأكد أن كل طالب يعمل برمزه وعلى الجلسة المحددة.</li>
+        <li>راقب نجاح تبادل الصوت، وتدخّل في المشكلة التقنية عند الحاجة.</li>
+        <li>شجّع الطالب على الاستمرار وإعادة المحاولة، وطبّق مقدار المساعدة المتفق عليه مع الباحث.</li>
+        <li>التزم بزمن المراحل المقرر، ولا تقدّم مرحلة أو تختصرها بنفسك.</li>
+      </ul>
+    </div>
+    <div class="tcard glass">
+      <p class="card-title"><svg class="ic"><use href="#i-clock"/></svg>بعد كل جلسة</p>
+      <ul>
+        <li>تحقق من ظهور حالة Completed لكل طالب.</li>
+        <li>سجّل وقت البدء والإتمام، وأي انقطاع أو تغيير في طريقة المشاركة.</li>
+        <li>ارفع الحالات غير المحسومة إلى الباحث قبل أي إعادة للجلسة.</li>
+        <li>اطلب من الطالب تسجيل الخروج إذا كان الجهاز مشتركًا.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="t-grid">
+    <div class="panel glass">
+      <p class="card-title"><svg class="ic"><use href="#i-shield"/></svg>حدود مساعدة المعلم</p>
+      <p class="t-note">اشرح طريقة التشغيل، وقدّم الدعم التقني، وحافظ على نمط المساعدة نفسه لجميع الطلاب، وشجّع كل طالب على إنتاج إجابته بنفسه. لا تقرر إعادة الجلسة أو تغيير الجهاز أو اعتماد الكتابة بدل الصوت إلا بتعليمات الباحث، فالنشاط يستهدف مهارة التحدث.</p>
+      <p class="t-note">النسبة التي تظهر مع النص في فحص الميكروفون تعبّر عن ثقة النظام في التعرف على الكلام، ولا تُفسَّر درجةً للطالب. وتحليل الأداء داخل البيئة وسيلة متابعة، أما درجات أدوات البحث فتتبع إجراءات التصحيح المعتمدة.</p>
+    </div>
+    <div class="panel glass">
+      <p class="card-title"><svg class="ic"><use href="#i-alert"/></svg>عند عطل يحتاج إلى متابعة</p>
+      <p class="t-note">سجّل المرحلة والرسالة الظاهرة قبل أي إجراء قد يغيّر حالة الجلسة، ثم أرسل للباحث:</p>
+      <ul class="fields">
+        <li>الرمز البحثي</li><li>رقم الجلسة</li><li>المرحلة</li><li>وقت المشكلة</li><li>نص الرسالة</li><li>الجهاز والمتصفح</li><li>ما جُرّب من حلول</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot glass">
+  <div>
+    <a class="brand" href="#top"><span class="mark"><svg class="ic"><use href="#i-mark"/></svg></span><span class="brand-name"><b>Speak</b>Better</span></a>
+    <span class="tagline">Real Conversations. A Brighter You.</span>
+  </div>
+  <p class="credit">إعداد: <b>الباحث أحمد بن محمد الحياني</b></p>
+  <div class="foot-links">
+    <a class="btn btn-ghost btn-sm" href="#top">العودة إلى البداية</a>
+    <a class="btn btn-primary btn-sm" href="https://speakbetter.me" target="_blank" rel="noopener">افتح البيئة <svg class="ic"><use href="#i-ext"/></svg></a>
+  </div>
+</footer>
+</div>
+
+<dialog class="lb" id="lightbox" dir="rtl" aria-label="صورة مكبرة">
+  <div class="lb-in">
+    <button type="button" class="lb-close" data-close aria-label="إغلاق"><svg class="ic"><use href="#i-close"/></svg></button>
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+    <p class="lb-cap"></p>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const d = document, root = d.documentElement;
+  root.lang = 'ar'; root.dir = 'rtl';
+  const $ = (s, r = d) => r.querySelector(s);
+  const $$ = (s, r = d) => Array.from(r.querySelectorAll(s));
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* tab lists (screen states, feedback levels) */
+  function wireTabs(list, onSelect) {
+    const tabs = $$('[role="tab"]', list);
+    const select = (i, focus) => {
+      tabs.forEach((t, j) => {
+        const on = j === i;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        const p = d.getElementById(t.getAttribute('aria-controls'));
+        if (p) {
+          if (on && p.hidden) { p.classList.remove('enter'); void p.offsetWidth; p.classList.add('enter'); }
+          p.hidden = !on;
+        }
+      });
+      if (focus) tabs[i].focus();
+      if (onSelect) onSelect(tabs[i]);
+    };
+    tabs.forEach((t, i) => t.addEventListener('click', () => select(i)));
+    list.addEventListener('keydown', e => {
+      const i = tabs.indexOf(d.activeElement);
+      if (i < 0) return;
+      let n = null;
+      if (e.key === 'ArrowLeft') n = i + 1;
+      else if (e.key === 'ArrowRight') n = i - 1;
+      else if (e.key === 'Home') n = 0;
+      else if (e.key === 'End') n = tabs.length - 1;
+      if (n === null) return;
+      e.preventDefault();
+      select((n + tabs.length) % tabs.length, true);
+    });
+  }
+  $$('[data-shot]').forEach(fig => {
+    const list = $('[role="tablist"]', fig), cap = $('.shot-cap span', fig);
+    if (!list) return;
+    wireTabs(list, t => {
+      const p = d.getElementById(t.getAttribute('aria-controls'));
+      if (cap && p) cap.textContent = p.dataset.cap || '';
+    });
+  });
+  $$('[data-tabs]').forEach(list => wireTabs(list));
+
+  /* lightbox */
+  const lb = $('#lightbox'), lbImg = $('img', lb), lbCap = $('.lb-cap', lb);
+  const closeLb = () => { if (typeof lb.close === 'function') lb.close(); else lb.removeAttribute('open'); };
+  d.addEventListener('click', e => {
+    const z = e.target.closest('[data-full]');
+    if (!z) return;
+    const img = $('img', z);
+    lbImg.src = z.dataset.full;
+    lbImg.alt = img ? img.alt : '';
+    lbCap.textContent = img ? img.alt : '';
+    if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+  });
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.closest('[data-close]')) closeLb(); });
+
+  /* interface map */
+  const view = $('.map-view'), inner = $('.map-inner');
+  if (view && inner) {
+    const hots = $$('.hot', inner), legend = $$('.map-legend button'), resetBtn = $('.map-reset');
+    let cur = -1;
+    const apply = () => {
+      if (cur < 0) {
+        inner.style.transform = '';
+        inner.style.setProperty('--s', 1);
+      } else {
+        const [cx, cy, s] = hots[cur].dataset.zoom.split(',').map(Number);
+        const W = view.clientWidth, H = view.clientHeight;
+        let tx = W / 2 - s * cx * W, ty = H / 2 - s * cy * H;
+        tx = Math.min(0, Math.max(W - s * W, tx));
+        ty = Math.min(0, Math.max(H - s * H, ty));
+        inner.style.setProperty('--s', s);
+        inner.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`;
+      }
+      hots.forEach((h, i) => { h.classList.toggle('is-on', i === cur); h.setAttribute('aria-pressed', i === cur ? 'true' : 'false'); });
+      legend.forEach((b, i) => { b.classList.toggle('is-on', i === cur); b.setAttribute('aria-pressed', i === cur ? 'true' : 'false'); });
+      if (resetBtn) resetBtn.hidden = cur < 0;
+    };
+    const pick = i => { cur = cur === i ? -1 : i; apply(); };
+    hots.forEach((h, i) => h.addEventListener('click', () => pick(i)));
+    legend.forEach((b, i) => b.addEventListener('click', () => {
+      pick(i);
+      const r = view.getBoundingClientRect();
+      if (cur >= 0 && (r.top < 80 || r.bottom > window.innerHeight)) view.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' });
+    }));
+    if (resetBtn) resetBtn.addEventListener('click', () => { cur = -1; apply(); });
+    window.addEventListener('resize', () => { if (cur >= 0) apply(); });
+    apply();
+  }
+
+  /* pronunciation: recorded male voice; a male browser voice only if a clip cannot play */
+  const synth = window.speechSynthesis;
+  const canSpeak = !!synth && 'SpeechSynthesisUtterance' in window;
+  const MALE = /\b(david|mark|guy|davis|andrew|brian|christopher|eric|roger|steffan|tony|jason|ryan|alex|daniel|fred|aaron|arthur|gordon|ralph|rishi|tom|male)\b/i;
+  let voices = [];
+  const loadVoices = () => { try { voices = synth.getVoices() || []; } catch (_) { voices = []; } };
+  if (canSpeak) { loadVoices(); try { synth.onvoiceschanged = loadVoices; } catch (_) {} }
+  const player = new Audio();
+  let current = null;
+  const clear = () => { if (current) current.classList.remove('is-playing'); current = null; };
+  const speakFallback = () => {
+    const b = current;
+    if (!b || !canSpeak) { clear(); return; }
+    const en = voices.filter(v => /^en/i.test(v.lang));
+    const v = en.find(x => MALE.test(x.name) && /^en[-_]US/i.test(x.lang)) || en.find(x => MALE.test(x.name));
+    if (!v) { clear(); return; }
+    try {
+      synth.cancel();
+      const u = new SpeechSynthesisUtterance(b.dataset.say);
+      u.lang = v.lang; u.voice = v; u.rate = 0.9;
+      u.onend = u.onerror = () => { if (current === b) clear(); };
+      setTimeout(() => { if (current === b) clear(); }, 8000);
+      synth.speak(u);
+    } catch (_) { clear(); }
+  };
+  player.addEventListener('ended', clear);
+  player.addEventListener('error', () => { if (current) speakFallback(); });
+  $$('[data-say]').forEach(b => b.addEventListener('click', () => {
+    const again = current === b;
+    try { player.pause(); } catch (_) {}
+    if (canSpeak) { try { synth.cancel(); } catch (_) {} }
+    clear();
+    if (again) return;
+    current = b; b.classList.add('is-playing');
+    player.src = b.dataset.audio;
+    const p = player.play();
+    if (p && p.catch) p.catch(err => { if (current === b && (!err || err.name !== 'AbortError')) speakFallback(); });
+  }));
+
+  /* copy opening script */
+  $$('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    const el = d.getElementById(b.dataset.copy), label = $('span', b);
+    const text = el.innerText.trim();
+    const ok = () => { label.textContent = 'تم النسخ'; setTimeout(() => { label.textContent = 'انسخ النص'; }, 2200); };
+    const fallback = () => {
+      const r = d.createRange(); r.selectNodeContents(el);
+      const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      label.textContent = 'النص محدد، انسخه';
+    };
+    try { navigator.clipboard.writeText(text).then(ok, fallback); } catch (_) { fallback(); }
+  }));
+
+  /* readiness checklist (remembered on this device only) */
+  const KEY = 'speakbetter-guide-ready';
+  const boxes = $$('#ready input[type="checkbox"]');
+  const countEl = $('#ready-count'), meter = $('#ready-meter'), done = $('#ready-done');
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (_) { saved = {}; }
+  const update = () => {
+    const n = boxes.filter(b => b.checked).length;
+    countEl.textContent = n;
+    meter.style.setProperty('--p', (n / boxes.length * 100) + '%');
+    done.hidden = n !== boxes.length;
+    try { localStorage.setItem(KEY, JSON.stringify(Object.fromEntries(boxes.map(b => [b.id, b.checked])))); } catch (_) {}
+  };
+  boxes.forEach(b => { b.checked = !!saved[b.id]; b.addEventListener('change', update); });
+  update();
+
+  /* timeline: link segments and stage cards */
+  $$('[data-stage]').forEach(el => {
+    const grp = $$(`[data-stage="${el.dataset.stage}"]`);
+    const on = () => grp.forEach(x => x.classList.add('is-hot'));
+    const off = () => grp.forEach(x => x.classList.remove('is-hot'));
+    el.addEventListener('mouseenter', on); el.addEventListener('mouseleave', off);
+    el.addEventListener('focusin', on); el.addEventListener('focusout', off);
+  });
+
+  /* highlight the current section in the header */
+  const nav = $('.nav'), links = $$('a[href^="#"]', nav);
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const a = byId.get(en.target.id);
+      links.forEach(x => { x.classList.toggle('is-active', x === a); if (x === a) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+      if (!a) return;
+      const r = a.getBoundingClientRect(), nr = nav.getBoundingClientRect();
+      if (r.left < nr.left + 8 || r.right > nr.right - 8) nav.scrollBy({ left: (r.left + r.width / 2) - (nr.left + nr.width / 2), behavior: reduce ? 'auto' : 'smooth' });
+    }), { rootMargin: '-35% 0px -60% 0px' });
+    ['top', ...byId.keys()].forEach(id => { const s = d.getElementById(id); if (s) io.observe(s); });
+  }
+})();
+</script>
+
+</body>
+</html>
